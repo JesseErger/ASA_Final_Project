@@ -48,11 +48,13 @@ void initRenderer(struct renderer *renderer) {
  */
 int main(int argc, char *argv[]) {
 	
-	time_t start, stop;
+	// time_t start, stop;
 	
 	//Seed RNGs
-	srand((int)time(NULL));
-	srand48(time(NULL));
+	// srand((int)time(NULL));
+	// srand48(time(NULL));
+	srand(1);
+	srand48(1);
 	
 	//Initialize renderer
 	initRenderer(&mainRenderer);
@@ -95,7 +97,7 @@ int main(int argc, char *argv[]) {
 	computeFocalLength(&mainRenderer);
 	
 	//This is a timer to elapse how long a render takes per frame
-	time(&start);
+	// time(&start);
 	
 	//Create threads
 	int t;
@@ -204,19 +206,17 @@ int main(int argc, char *argv[]) {
 	
 	renderThread(&mainRenderer.renderThreadInfo[0]);
 
-	time(&stop);
-	printDuration(difftime(stop, start));
+	// time(&stop);
+	// printDuration(difftime(stop, start));
 	
 	//Write to file
-	writeImage(mainRenderer.image);
+	// writeImage(mainRenderer.image);
 	
-	mainRenderer.scene->camera->currentFrame++;
+	// mainRenderer.scene->camera->currentFrame++;
 	
 	freeMem();
 	
 	printf("Render finished, exiting.\n");
-	sleepMSec(10000);
-	
 	return 0;
 }
 

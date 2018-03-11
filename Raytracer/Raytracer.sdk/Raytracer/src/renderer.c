@@ -53,10 +53,6 @@ struct renderTile getTile() {
  @param scene scene object
  */
 void quantizeImage() {
-#ifdef WINDOWS
-	//Create this here for now
-	tileMutex = CreateMutex(NULL, FALSE, NULL);
-#endif
 	printf("Quantizing render plane...\n");
 	
 	//Sanity check on tilesizes
@@ -296,7 +292,7 @@ void computeTimeAverage(struct renderTile tile) {
 		struct renderTile tile = getTile();
 		
 		while (tile.tileNum != -1) {
-			time(&tile.start);
+			// time(&tile.start);
 			
 			while (tile.completedSamples < mainRenderer.sampleCount+1 && mainRenderer.isRendering) {
 				for (int y = tile.endY; y > tile.startY; y--) {
@@ -384,6 +380,8 @@ void computeTimeAverage(struct renderTile tile) {
 						mainRenderer.renderBuffer[(x + (height - y)*width)*3 + 1] = output.green;
 						mainRenderer.renderBuffer[(x + (height - y)*width)*3 + 2] = output.blue;
 						
+						printf("Sample: %i \t Position: %i, %i \t R: %f \t G: %f \t B:%f\n", tile.completedSamples, x, y, output.red, output.green, output.blue);
+
 						//And store the image data
 						//Note how imageData only stores 8-bit precision for each color channel.
 						//This is why we use the renderBuffer for the running average as it just contains
@@ -405,13 +403,20 @@ void computeTimeAverage(struct renderTile tile) {
 			}
 			//Tile has finished rendering, get a new one and start rendering it.
 			mainRenderer.renderTiles[tile.tileNum].isRendering = false;
-			time(&tile.stop);
-			computeTimeAverage(tile);
+			// time(&tile.stop);
+			// computeTimeAverage(tile);
 			tile = getTile();
 		}
 		//No more tiles to render, exit thread. (render done)
 		printf("Thread %i done\n", tinfo->thread_num);
 		tinfo->threadComplete = true;
+
+		int max = sizeof(mainRenderer.renderBuffer) / sizeof(mainRenderer.renderBuffer[0]);
+		printf("%i\n", sizeof(mainRenderer.renderBuffer));
+		printf("%i\n", max);
+
+		for (int i = 0; i < max; i++)
+			printf("%f\n", mainRenderer.renderBuffer[i]);
 
 		return 0;
 }
