@@ -100,7 +100,7 @@ int main(int argc, char *argv[]) {
 	// time(&start);
 	
 	//Create threads
-	int t;
+	//int t;
 	
 	//Alloc memory for pthread_create() args
 	mainRenderer.renderThreadInfo = (struct threadInfo*)calloc(mainRenderer.threadCount, sizeof(struct threadInfo));
@@ -156,7 +156,7 @@ int main(int argc, char *argv[]) {
 	// pthread_attr_setdetachstate(&mainRenderer.renderThreadAttributes, PTHREAD_CREATE_JOINABLE);
 
 	//Main loop (input)
-	bool threadsHaveStarted = false;
+	//bool threadsHaveStarted = false;
 
 	// Original thread based rendering
 	/*
