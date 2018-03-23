@@ -1,0 +1,290 @@
+19:45:30 **** Incremental Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:45:33 **** Incremental Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:47:51 **** Incremental Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:49:11 **** Incremental Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:51:35 **** Incremental Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:52:22 **** Incremental Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:56:22 **** Auto Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:58:48 **** Auto Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:59:03 **** Incremental Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:59:17 **** Incremental Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:59:42 **** Incremental Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:59:46 **** Incremental Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:06:10 **** Auto Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scene.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scene.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/scene.d" -MT"src/scene.o" -o "src/scene.o" "../src/scene.c"
+'Finished building: ../src/scene.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "test.elf"  ./src/bbox.o ./src/camera.o ./src/color.o ./src/converter.o ./src/errorhandler.o ./src/filehandler.o ./src/helloworld.o ./src/kdtree.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/poly.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/transforms.o ./src/ui.o ./src/vector.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 258612	   3776	  23488	 285876	  45cb4	test.elf
+'Finished building: test.elf.size'
+' '
+20:06:15 **** Incremental Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:08:31 **** Incremental Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:12:32 **** Incremental Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "test.elf"  ./src/bbox.o ./src/camera.o ./src/color.o ./src/converter.o ./src/errorhandler.o ./src/filehandler.o ./src/helloworld.o ./src/kdtree.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/poly.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/transforms.o ./src/ui.o ./src/vector.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 258612	   3776	  23488	 285876	  45cb4	test.elf
+'Finished building: test.elf.size'
+' '
+20:14:51 **** Auto Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:139:2: error: unknown type name 'u32'
+  u32 addr = calloc(3 * mainRenderer.image->size.width * mainRenderer.image->size.height, sizeof(unsigned char));
+  ^~~
+../src/main.c:139:13: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+  u32 addr = calloc(3 * mainRenderer.image->size.width * mainRenderer.image->size.height, sizeof(unsigned char));
+             ^~~~~~
+make: *** [src/main.o] Error 1
+20:15:01 **** Auto Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:139:2: error: unknown type name 'u32'
+  u32* addr = calloc(3 * mainRenderer.image->size.width * mainRenderer.image->size.height, sizeof(unsigned char));
+  ^~~
+make: *** [src/main.o] Error 1
+20:15:27 **** Auto Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "test.elf"  ./src/bbox.o ./src/camera.o ./src/color.o ./src/converter.o ./src/errorhandler.o ./src/filehandler.o ./src/helloworld.o ./src/kdtree.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/poly.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/transforms.o ./src/ui.o ./src/vector.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 258612	   3776	  23488	 285876	  45cb4	test.elf
+'Finished building: test.elf.size'
+' '
+20:15:37 **** Incremental Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:16:21 **** Auto Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:139:15: warning: implicit declaration of function 'alloc' [-Wimplicit-function-declaration]
+  int * addr = alloc(3 * mainRenderer.image->size.width * mainRenderer.image->size.height, sizeof(unsigned char));
+               ^~~~~
+../src/main.c:139:15: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+'Finished building: ../src/main.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "test.elf"  ./src/bbox.o ./src/camera.o ./src/color.o ./src/converter.o ./src/errorhandler.o ./src/filehandler.o ./src/helloworld.o ./src/kdtree.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/poly.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/transforms.o ./src/ui.o ./src/vector.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+C:\Users\jerger\Desktop\project1\project1.sdk\test\Debug/../src/main.c:139: undefined reference to `alloc'
+collect2.exe: error: ld returned 1 exit status
+make: *** [test.elf] Error 1
+20:16:29 **** Auto Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:139:15: error: too many arguments to function 'malloc'
+  int * addr = malloc(3 * mainRenderer.image->size.width * mainRenderer.image->size.height, sizeof(unsigned char));
+               ^~~~~~
+In file included from c:\xilinx\sdk\2017.3\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:11:0,
+                 from ../src/includes.h:25,
+                 from ../src/main.c:9:
+c:\xilinx\sdk\2017.3\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdlib.h:100:6: note: declared here
+ _PTR _EXFUN_NOTHROW(malloc,(size_t __size));
+      ^
+make: *** [src/main.o] Error 1
+20:18:21 **** Auto Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "test.elf"  ./src/bbox.o ./src/camera.o ./src/color.o ./src/converter.o ./src/errorhandler.o ./src/filehandler.o ./src/helloworld.o ./src/kdtree.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/poly.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/transforms.o ./src/ui.o ./src/vector.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 258548	   3776	  23488	 285812	  45c74	test.elf
+'Finished building: test.elf.size'
+' '
+20:18:25 **** Auto Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "test.elf"  ./src/bbox.o ./src/camera.o ./src/color.o ./src/converter.o ./src/errorhandler.o ./src/filehandler.o ./src/helloworld.o ./src/kdtree.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/poly.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/transforms.o ./src/ui.o ./src/vector.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 258484	   3776	  23488	 285748	  45c34	test.elf
+'Finished building: test.elf.size'
+' '
+20:18:37 **** Auto Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "test.elf"  ./src/bbox.o ./src/camera.o ./src/color.o ./src/converter.o ./src/errorhandler.o ./src/filehandler.o ./src/helloworld.o ./src/kdtree.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/poly.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/transforms.o ./src/ui.o ./src/vector.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 258420	   3776	  23488	 285684	  45bf4	test.elf
+'Finished building: test.elf.size'
+' '
+20:19:51 **** Auto Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/renderer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/renderer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/renderer.d" -MT"src/renderer.o" -o "src/renderer.o" "../src/renderer.c"
+../src/renderer.c: In function 'computeTimeAverage':
+../src/renderer.c:274:30: warning: implicit declaration of function 'difftime' [-Wimplicit-function-declaration]
+  mainRenderer.avgTileTime += difftime(tile.stop, tile.start);
+                              ^~~~~~~~
+'Finished building: ../src/renderer.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "test.elf"  ./src/bbox.o ./src/camera.o ./src/color.o ./src/converter.o ./src/errorhandler.o ./src/filehandler.o ./src/helloworld.o ./src/kdtree.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/poly.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/transforms.o ./src/ui.o ./src/vector.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 257780	   3776	  23488	 285044	  45974	test.elf
+'Finished building: test.elf.size'
+' '
+20:20:03 **** Incremental Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.

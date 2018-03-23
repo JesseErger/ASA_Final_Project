@@ -1,0 +1,11 @@
+19:41:26 **** Incremental Build of configuration Debug for project RayTracer ****
+make all 
+'Building target: RayTracer.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "RayTracer.elf"  ./src/bbox.o ./src/camera.o ./src/color.o ./src/converter.o ./src/errorhandler.o ./src/filehandler.o ./src/kdtree.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/poly.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/transforms.o ./src/ui.o ./src/vector.o   -l-Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2017.3/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/6.2.1/../../../../arm-none-eabi/bin/ld.exe: cannot find -l-Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+collect2.exe: error: ld returned 1 exit status
+make: *** [RayTracer.elf] Error 1
+
+19:41:26 Build Finished (took 343ms)
+
