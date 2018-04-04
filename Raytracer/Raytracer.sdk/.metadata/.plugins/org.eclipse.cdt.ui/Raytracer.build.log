@@ -1,9 +1,0 @@
-20:38:40 **** Clean-only build of configuration Debug for project Raytracer ****
-make clean 
-rm -rf  ./src/bbox.o ./src/camera.o ./src/color.o ./src/converter.o ./src/errorhandler.o ./src/filehandler.o ./src/kdtree.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/poly.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/transforms.o ./src/ui.o ./src/vector.o  ./src/bbox.d ./src/camera.d ./src/color.d ./src/converter.d ./src/errorhandler.d ./src/filehandler.d ./src/kdtree.d ./src/light.d ./src/lightRay.d ./src/list.d ./src/lodepng.d ./src/main.d ./src/material.d ./src/obj.d ./src/obj_parser.d ./src/poly.d ./src/raytrace.d ./src/renderer.d ./src/scene.d ./src/sphere.d ./src/string_extra.d ./src/transforms.d ./src/ui.d ./src/vector.d  Raytracer.elf.size  Raytracer.elf
-rm: cannot remove `Raytracer.elf': Permission denied
-make: [clean] Error 1 (ignored)
-' '
-
-20:38:40 Build Finished (took 300ms)
-
