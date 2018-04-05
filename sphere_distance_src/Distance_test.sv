@@ -103,13 +103,13 @@ module Distance_test();
         // display the result
         $display("intersects? %d, distance=%d", intersects, distance);
         assert(intersects == 0);
-        // don't care about distance since there is no intersection
+        assert(distance == oldDistance);
         #(HalfClk * 2);
                 
-        // third test - currently incorrect
+        // third test - currently incorrect, need to divide by the norm of dx to correct
         $display("sphere radius 3 at (10, 10, 0) and a ray from (0, 0, 0) with direction (1, 1, 0)");
         $display("from the first step, discriminant is 72, B is -40, and intersects is true");
-        rootDiscriminant = 72;
+        rootDiscriminant = 8; // 8.48 rounded down
         B = 16'hffd8; // -40 with 16 bits signed
         quickIntersects = 1'b1;
         oldDistance = 1000;
@@ -126,7 +126,7 @@ module Distance_test();
         // display the result
         $display("intersects? %d, distance=%d", intersects, distance);
         assert(intersects == 1);
-        // don't care about distance since there is no intersection
+        // currently gives 16, true is 11.14
         #(HalfClk * 2);
                                       
         $finish;

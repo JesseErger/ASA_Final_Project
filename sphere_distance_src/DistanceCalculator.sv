@@ -62,18 +62,20 @@ module DistanceCalculator(
                     // implement with floating points as x < epsilon
                     if (t1 <= 0 || t1 >= oldDistance) begin
                         isects <= 1'b0;
+                        distance <= oldDistance;
                     end else begin
-                        isects <= 1'b1;
                         distance <= t1;
                     end
                 end else begin
                     if (t0 <= 0 || t0 >= oldDistance) begin
                         isects <= 1'b0;
+                        distance <= oldDistance;
                     end else begin
-                        isects <= 1'b1;
                         distance <= t0;
                     end
                 end
+            end else begin
+                distance <= oldDistance;
             end
         end
     end
