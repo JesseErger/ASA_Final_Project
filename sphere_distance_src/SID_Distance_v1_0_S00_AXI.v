@@ -88,10 +88,9 @@
     // User registers
     reg prevInput;
     reg InputValid;
-    wire valid;
     wire InputReady;
-    reg Intersects;
-    reg [15:0] Distance;
+    wire Intersects;
+    wire [15:0] Distance;
 
 	// AXI4LITE signals
 	reg [C_S_AXI_ADDR_WIDTH-1 : 0] 	axi_awaddr;
@@ -418,9 +417,7 @@
             prevInput = slv_reg3[0];
         end
     end
-    
-    assign valid = InputValid && RootValid;
-    
+        
 	DistanceCalculator calc(
 	   .RootDiscriminant(RootDiscriminant),
        .B(B),   
@@ -430,7 +427,7 @@
        .aresetn(S_AXI_ARESETN),
        .Intersects(Intersects),
        .Distance(Distance),
-       .InputValid(valid),
+       .InputValid(InputValid),
        .InputReady(InputReady)
 	);
 

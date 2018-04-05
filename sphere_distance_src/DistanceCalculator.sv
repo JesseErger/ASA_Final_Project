@@ -59,15 +59,15 @@ module DistanceCalculator(
         end else if (nextState == process) begin
             if (isects == 1'b1) begin
                 if (t0 > t1) begin
-                    // can we do the floating point check - and do we need to?
-                    if (t1 < 0.001 || t1 >= oldDistance) begin
+                    // implement with floating points as x < epsilon
+                    if (t1 <= 0 || t1 >= oldDistance) begin
                         isects <= 1'b0;
                     end else begin
                         isects <= 1'b1;
                         distance <= t1;
                     end
                 end else begin
-                    if (t0 < 0.001 || t0 >= oldDistance) begin
+                    if (t0 <= 0 || t0 >= oldDistance) begin
                         isects <= 1'b0;
                     end else begin
                         isects <= 1'b1;
