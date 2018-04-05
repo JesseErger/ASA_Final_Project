@@ -74,18 +74,17 @@ module Discriminant_test();
         if (inputReady != 1'b1) $fatal("not ready");
        
         // first test
-        $display("sphere radius 2 at (0, 0, 0) and a ray from (0, 10, 0) with direction (0, -1, 0)");
-        // intersects = true, b_out = -20, discriminant = 16
+        $display("sphere radius 2 at (0, 0, 0) and a ray from (0, 0, -10) with direction (0, 0, 1)");
         sphereX = 0;
         sphereY = 0;
         sphereZ = 0;
         sphereRadius = 2;
         rayX = 0;
-        rayY = 10;
-        rayZ = 0;
+        rayY = 0;
+        rayZ = -10;
         rayDX = 0;
-        rayDY = -1;
-        rayDZ = 0;
+        rayDY = 0;
+        rayDZ = 1;
         
         // wait until InputReady
         `waitForReady
@@ -97,11 +96,14 @@ module Discriminant_test();
         // wait until we see DataOutWrite go to 1
         `waitForOutValid
         // display the result
-        `displayOut
+        $display("intersects? %d, discriminant=%d, b=%d", intersects, discriminant, b_out);
+        assert(intersects == 1);
+        assert(discriminant == 16);
+        assert(b_out == 16'hffec); // -20 with 16 bits signed
+        #(HalfClk * 2);
         
         // second test
         $display("sphere radius 2 at (10, -10, 10) and a ray from (0, 10, 0) with direction (0, -1, 0)");
-        // intersects = false, b_out = -20, discriminant = -784
         sphereX = 10;
         sphereY = -10;
         sphereZ = 10;
@@ -112,7 +114,7 @@ module Discriminant_test();
         rayDX = 0;
         rayDY = -1;
         rayDZ = 0;
-        
+                       
         // wait until InputReady
         `waitForReady
         inputValid = 1'b1;       
@@ -123,9 +125,43 @@ module Discriminant_test();
         // wait until we see DataOutWrite go to 1
         `waitForOutValid
         // display the result
-        `displayOut
+        $display("intersects? %d, discriminant=%d, b=%d", intersects, discriminant, b_out);
+        assert(intersects == 0);
+        assert(discriminant == 16'hfcf0); // -784 with 16 bits signed
+        assert(b_out == 16'hffd8); // -40 with 16 bits signed
+        #(HalfClk * 2);
           
-         $finish;
+        
+        // third test
+        $display("sphere radius 3 at (10, 10, 0) and a ray from (0, 0, 0) with direction (1, 1, 0)");
+        sphereX = 10;
+        sphereY = 10;
+        sphereZ = 0;
+        sphereRadius = 3;
+        rayX = 0;
+        rayY = 0;
+        rayZ = 0;
+        rayDX = 1;
+        rayDY = 1;
+        rayDZ = 0;
+                               
+        // wait until InputReady
+        `waitForReady
+        inputValid = 1'b1;       
+        // wait 1 cycle to make sure input is captured
+        #(HalfClk * 2);
+        inputValid = 1'b0;
+        
+        // wait until we see DataOutWrite go to 1
+        `waitForOutValid
+        // display the result
+        $display("intersects? %d, discriminant=%d, b=%d", intersects, discriminant, b_out);
+        assert(intersects == 1);
+        assert(discriminant == 16'h0048);
+        assert(b_out == 16'hffd8); // -40 with 16 bits signed
+        #(HalfClk * 2);
+          
+        $finish;
     end
     
 endmodule
