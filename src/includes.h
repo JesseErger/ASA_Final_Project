@@ -7,11 +7,6 @@
 //
 
 #pragma once
-
-#include <stdio.h>
-#include "platform.h"
-#include "xil_printf.h"
-
 //Global constants
 #define MAX_CRAY_VERTEX_COUNT 3
 #define PIOVER180 0.017453292519943295769236907684886
@@ -30,15 +25,16 @@
 #include <signal.h>
 #include <string.h>
 
-//These are for multi-platform physical core detection
-//#ifdef MACOS
-//#include <sys/param.h>
-//#include <sys/sysctl.h>
-//#elif _WIN32
-//#include <windows.h>
-//#else
+#ifdef WINDOWS
+#include <Windows.h>
+#endif
+#include "lodepng.h"
+
+#ifdef _WIN32
+#include <windows.h>
+#else
 #include <unistd.h>
-//#endif
+#endif
 
 //Project includes
 #define MATERIAL_NAME_SIZE 255

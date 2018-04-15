@@ -8,7 +8,7 @@
 
 #pragma once
 
-struct crayOBJ;
+
 struct light;
 struct material;
 struct sphere;
@@ -23,7 +23,7 @@ struct world {
 	
 	//Ambient background color.
 	struct color *ambientColor;
-
+	
 	//Lights
 	struct light *lights;
 	int lightCount;

@@ -8,10 +8,19 @@
 
 #include "includes.h"
 #include "raytrace.h"
-
 #include "scene.h"
 #include "camera.h"
 #include "light.h"
+
+/**
+ Traverse a k-d tree and see if a ray collides with a polygon.
+
+ @param node Given tree to traverse
+ @param ray Ray to check intersection on
+ @param info Shading information
+ @return True if ray hits a polygon in a leaf node, otherwise false
+ */
+
 
 bool rayIntersectsWithSphereTemp(struct sphere *sphere, struct lightRay *ray, struct intersection *isect) {
 	//Pass the distance value to rayIntersectsWithSphere, where it's set
@@ -33,7 +42,7 @@ bool rayIntersectsWithSphereTemp(struct sphere *sphere, struct lightRay *ray, st
 		return false;
 	}
 }
-
+	
 /**
  Calculate the closest intersection point, and other relevant information based on a given lightRay and scene
  See the intersection struct for documentation of what this function calculates.
@@ -62,14 +71,7 @@ struct intersection getClosestIsect(struct lightRay *incidentRay, struct world *
 			isect.didIntersect = true;
 		}
 	}
-	
-	//Note: rayIntersectsWithNode makes sure this isect is closer than a possible sphere
-	//So if it finds an intersection that is farther away than the intersection we found above with
-	//a sphere, it will return false
-	//This is how most raytracers solve the visibility problem.
-	//intersect that happened in the previous check^.
-
-	
+		
 	return isect;
 }
 
@@ -178,7 +180,7 @@ struct color getSpecular(const struct intersection *isect, struct light *light, 
  @return Highlighted color
  */
 struct color getHighlights(const struct intersection *isect, struct color *color, struct world *scene) {
-
+	//diffuse and specular highlights
 	struct color  diffuse = (struct color){0.0, 0.0, 0.0, 0.0};
 	struct color specular = (struct color){0.0, 0.0, 0.0, 0.0};
 	
@@ -338,6 +340,8 @@ struct color getReflectsAndRefracts(const struct intersection *isect, struct col
  @return (Hopefully) correct color based on the given information.
  */
 struct color getLighting(const struct intersection *isect, struct world *scene) {
+	struct coord textureCoord = {0.0, 0.0};
+
 	//Grab the 'base' diffuse color of the intersected object, and pass that to the
 	//additional functions to add shading to it.
 	struct color output = isect->end.diffuse;
@@ -415,6 +419,8 @@ struct color rayTrace(struct lightRay *incidentRay, struct world *scene) {
 		
 		struct material currentMaterial;
 		struct vector surfaceNormal = {0.0, 0.0, 0.0, false};
+		struct coord  uv          = {0.0, 0.0};
+		struct coord textureCoord = {0.0, 0.0};
 		struct vector hitpoint;
 		
 		for (unsigned i = 0; i < sphereAmount; ++i) {
@@ -426,18 +432,7 @@ struct color rayTrace(struct lightRay *incidentRay, struct world *scene) {
 		
 		isectInfo->distance = closestIntersection;
 		isectInfo->surfaceNormal = surfaceNormal;
-		
-		/*unsigned o, p;
-		for (o = 0; o < objCount; o++) {
-			for (p = scene->objs[o].firstPolyIndex; p < (scene->objs[o].firstPolyIndex + scene->objs[o].polyCount); p++) {
-				if (rayIntersectsWithPolygon(incidentRay, &polygonArray[p], &closestIntersection, &surfaceNormal, &uv)) {
-					currentPolygon = p;
-					currentMaterial = scene->objs[o].materials[polygonArray[p].materialIndex];
-					currentSphere = -1;
-				}
-			}
-		}
-		*/
+
 		//Ray-object intersection detection
 		if (currentSphere != -1) {
 			struct vector scaled = vectorScale(closestIntersection, &incidentRay->direction);

@@ -13,14 +13,6 @@ enum renderOrder;
 struct outputImage;
 
 /**
- Thread information struct to communicate with main thread
- */
-struct threadInfo {
-	int thread_num;
-	bool threadComplete;
-};
-
-/**
  Render tile, contains needed information for the renderer
  */
 struct renderTile {
@@ -32,7 +24,14 @@ struct renderTile {
 	int completedSamples;
 	bool isRendering;
 	int tileNum;
-	time_t start, stop;
+};
+
+enum renderOrder {
+	renderOrderTopToBottom = 0,
+	renderOrderFromMiddle,
+	renderOrderToMiddle,
+	renderOrderNormal,
+	renderOrderRandom
 };
 
 /**
@@ -41,7 +40,9 @@ struct renderTile {
  */
 struct renderer {
 	struct threadInfo *renderThreadInfo; //Info about threads
+
 	struct world *scene; //Scene to render
+	char *inputFilePath; //Directory to load input files from
 	struct outputImage *image; //Output image
 	struct renderTile *renderTiles; //Array of renderTiles to render
 	int tileCount; //Total amount of render tiles
@@ -54,11 +55,10 @@ struct renderer {
 	bool renderPaused; //SDL listens for P key pressed, which sets this
 	bool renderAborted;//SDL listens for X key pressed, which sets this
 	bool smoothShading;//Unused
-	time_t avgTileTime;//Used for render duration estimation
+	//time_t avgTileTime;//Used for render duration estimation
 	int timeSampleCount;//Used for render duration estimation, amount of time samples captured
 	
 	//Prefs
-	int threadCount; //Amount of threads to render with
 	int sampleCount;
 	bool antialiasing;
 	bool newRenderer;
@@ -66,15 +66,17 @@ struct renderer {
 	int tileHeight;
 };
 
-/*
- Move to renderer:
- 
- Move to UI:
- isFullScreen
- isBorderless
- windowScale
- */
 
+ //Renderer
+int renderThread();
+
+ /*
+//Renderer
+#ifdef WINDOWS
+DWORD WINAPI renderThread(LPVOID arg);
+#else
 void *renderThread(void *arg);
+#endif
+*/
 void quantizeImage();
-void reorderTiles(enum renderOrder order);
+

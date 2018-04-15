@@ -8,6 +8,7 @@
 
 #include "includes.h"
 #include "renderer.h"
+
 #include "camera.h"
 #include "light.h"
 #include "scene.h"
@@ -46,17 +47,10 @@ struct renderTile getTile() {
 void quantizeImage() {
 	printf("Quantizing render plane...\n");
 	
-	//Sanity check on tilesizes
-	if (mainRenderer.tileWidth >= mainRenderer.image->size.width) mainRenderer.tileWidth = mainRenderer.image->size.width;
-	if (mainRenderer.tileHeight >= mainRenderer.image->size.height) mainRenderer.tileHeight = mainRenderer.image->size.height;
-	if (mainRenderer.tileWidth <= 0) mainRenderer.tileWidth = 1;
-	if (mainRenderer.tileHeight <= 0) mainRenderer.tileHeight = 1;
+
 	
-	int tilesX = mainRenderer.image->size.width / mainRenderer.tileWidth;
-	int tilesY = mainRenderer.image->size.height / mainRenderer.tileHeight;
-	
-	tilesX = (mainRenderer.image->size.width % mainRenderer.tileWidth) != 0 ? tilesX + 1: tilesX;
-	tilesY = (mainRenderer.image->size.height % mainRenderer.tileHeight) != 0 ? tilesY + 1: tilesY;
+	int tilesX = 1;
+	int tilesY = 1;
 	
 	mainRenderer.renderTiles = (struct renderTile*)calloc(tilesX*tilesY, sizeof(struct renderTile));
 	if (mainRenderer.renderTiles == NULL) {
@@ -64,47 +58,26 @@ void quantizeImage() {
 		abort();
 	}
 	
-	for (int y = 0; y < tilesY; y++) {
-		for (int x = 0; x < tilesX; x++) {
-			struct renderTile *tile = &mainRenderer.renderTiles[x + y*tilesX];
-			tile->width  = mainRenderer.tileWidth;
-			tile->height = mainRenderer.tileHeight;
-			
-			tile->startX = x       * mainRenderer.tileWidth;
-			tile->endX   = (x + 1) * mainRenderer.tileWidth;
-			
-			tile->startY = y       * mainRenderer.tileHeight;
-			tile->endY   = (y + 1) * mainRenderer.tileHeight;
-			
-			tile->endX = min((x + 1) * mainRenderer.tileWidth, mainRenderer.image->size.width);
-			tile->endY = min((y + 1) * mainRenderer.tileHeight, mainRenderer.image->size.height);
-			
-			//Samples have to start at 1, so the running average works
-			tile->completedSamples = 1;
-			tile->isRendering = false;
-			tile->tileNum = mainRenderer.tileCount;
-			
-			mainRenderer.tileCount++;
-		}
-	}
+
+	struct renderTile *tile = &mainRenderer.renderTiles[0];
+	tile->width  = 1280;
+	tile->height = 800;
+
+	tile->startX = 0;
+	tile->endX   = 1280;
+
+	tile->startY = 0;
+	tile->endY   = 800;
+
+
+	//Samples have to start at 1, so the running average works
+	tile->completedSamples = 1;
+	tile->isRendering = false;
+	tile->tileNum = mainRenderer.tileCount;
+
+	mainRenderer.tileCount++;
+
 	printf("Quantized image into %i tiles. (%ix%i)", (tilesX*tilesY), tilesX, tilesY);
-}
-
-
-/**
- Reorder renderTiles to start from top
- */
-void reorderTopToBottom() {
-	int endIndex = mainRenderer.tileCount - 1;
-	
-	struct renderTile *tempArray = (struct renderTile*)calloc(mainRenderer.tileCount, sizeof(struct renderTile));
-	
-	for (int i = 0; i < mainRenderer.tileCount; i++) {
-		tempArray[i] = mainRenderer.renderTiles[endIndex--];
-	}
-	
-	free(mainRenderer.renderTiles);
-	mainRenderer.renderTiles = tempArray;
 }
 
 unsigned int rand_interval(unsigned int min, unsigned int max) {
@@ -140,122 +113,123 @@ struct color getPixel(int x, int y) {
 	return output;
 }
 
-/**
- A render thread
- 
- @param arg Thread information (see threadInfo struct)
- @return Exits when thread is done
- */
-void *renderThread(void *arg) {
-	struct lightRay incidentRay;
-	//First time setup for each thread
-	struct renderTile tile = getTile();
-	print("Made it here");
-	while (tile.tileNum != -1) {
-		while (tile.completedSamples < mainRenderer.sampleCount+1 && mainRenderer.isRendering) {
-			for (int y = tile.endY; y > tile.startY; y--) {
-				for (int x = tile.startX; x < tile.endX; x++) {
+int renderThread() {
+		struct lightRay incidentRay;
 
-					int height = mainRenderer.image->size.height;
-					int width = mainRenderer.image->size.width;
-
-					double fracX = (double)x;
-					double fracY = (double)y;
-
-					//A cheap 'antialiasing' of sorts. The more samples, the better this works
-					if (mainRenderer.antialiasing) {
-						fracX = getRandomDouble(fracX - 0.25, fracX + 0.25);
-						fracY = getRandomDouble(fracY - 0.25, fracY + 0.25);
-					}
-
-					//Set up the light ray to be casted. direction is pointing towards the X,Y coordinate on the
-					//imaginary plane in front of the origin. startPos is just the camera position.
-					struct vector direction = {(fracX - 0.5 * mainRenderer.image->size.width)
-												/ mainRenderer.scene->camera->focalLength,
-											   (fracY - 0.5 * mainRenderer.image->size.height)
-												/ mainRenderer.scene->camera->focalLength,
-												1.0,
-												false};
-
-					//Normalize direction
-					direction = normalizeVector(&direction);
-					struct vector startPos = mainRenderer.scene->camera->pos;
-					struct vector left = mainRenderer.scene->camera->left;
-					struct vector up = mainRenderer.scene->camera->up;
-
-					//Run camera tranforms on direction vector
-					transformCameraView(mainRenderer.scene->camera, &direction);
-
-					//Now handle aperture
-					//FIXME: This is a 'square' aperture
-					double aperture = mainRenderer.scene->camera->aperture;
-					if (aperture <= 0.0) {
-						incidentRay.start = startPos;
-					} else {
-						double randY = getRandomDouble(-aperture, aperture);
-						double randX = getRandomDouble(-aperture, aperture);
+		//First time setup for each thread
+		struct renderTile tile = getTile();
+		
+		while (tile.tileNum != -1) {
+			//time(&tile.start);
+			printf("Starting tile %i\n", tile.tileNum);
+			while (tile.completedSamples < mainRenderer.sampleCount+1 && mainRenderer.isRendering) {
+				for (int y = tile.endY; y > tile.startY; y--) {
+					for (int x = tile.startX; x < tile.endX; x++) {
+						if(y==794 && x==511){
+							printf("crashes when x = 512 on getPixel(x, y)");
+						}
+						int height = mainRenderer.image->size.height;
+						int width = mainRenderer.image->size.width;
 						
-						struct vector upTemp = vectorScale(randY, &up);
-						struct vector temp = addVectors(&startPos, &upTemp);
-						struct vector leftTemp = vectorScale(randX, &left);
-						struct vector randomStart = addVectors(&temp, &leftTemp);
+						double fracX = (double)x;
+						double fracY = (double)y;
 						
-						incidentRay.start = randomStart;
+						//A cheap 'antialiasing' of sorts. The more samples, the better this works
+						if (mainRenderer.antialiasing) {
+							fracX = getRandomDouble(fracX - 0.25, fracX + 0.25);
+							fracY = getRandomDouble(fracY - 0.25, fracY + 0.25);
+						}
+						
+						//Set up the light ray to be casted. direction is pointing towards the X,Y coordinate on the
+						//imaginary plane in front of the origin. startPos is just the camera position.
+						struct vector direction = {(fracX - 0.5 * width)
+													/ mainRenderer.scene->camera->focalLength,
+												   (fracY - 0.5 * height)
+													/ mainRenderer.scene->camera->focalLength,
+													1.0,
+													false};
+						
+						//Normalize direction
+						direction = normalizeVector(&direction);
+						struct vector startPos = mainRenderer.scene->camera->pos;
+						struct vector left = mainRenderer.scene->camera->left;
+						struct vector up = mainRenderer.scene->camera->up;
+						
+						//Run camera tranforms on direction vector
+						transformCameraView(mainRenderer.scene->camera, &direction);
+						
+						//Now handle aperture
+						//FIXME: This is a 'square' aperture
+						double aperture = mainRenderer.scene->camera->aperture;
+						if (aperture <= 0.0) {
+							incidentRay.start = startPos;
+						} else {
+							double randY = getRandomDouble(-aperture, aperture);
+							double randX = getRandomDouble(-aperture, aperture);
+							
+							struct vector upTemp = vectorScale(randY, &up);
+							struct vector temp = addVectors(&startPos, &upTemp);
+							struct vector leftTemp = vectorScale(randX, &left);
+							struct vector randomStart = addVectors(&temp, &leftTemp);
+							
+							incidentRay.start = randomStart;
+						}
+						
+						incidentRay.direction = direction;
+						incidentRay.rayType = rayTypeIncident;
+						incidentRay.remainingInteractions = mainRenderer.scene->camera->bounces;
+						incidentRay.currentMedium.IOR = AIR_IOR;
+						
+						//For multi-sample rendering, we keep a running average of color values for each pixel
+						//The next block of code does this
+						
+						//Get previous color value from render buffer
+						struct color output = getPixel(x, y);
+						struct color sample = {0.0,0.0,0.0,0.0};
+						
+						//Get new sample (raytracing is initiated here)
+						if (mainRenderer.newRenderer) {
+							sample = newTrace(&incidentRay, mainRenderer.scene);
+						} else {
+							sample = rayTrace(&incidentRay, mainRenderer.scene);
+						}
+						
+						//And process the running average
+						output.red = output.red * (tile.completedSamples - 1);
+						output.green = output.green * (tile.completedSamples - 1);
+						output.blue = output.blue * (tile.completedSamples - 1);
+						
+						output = addColors(&output, &sample);
+						
+						output.red = output.red / tile.completedSamples;
+						output.green = output.green / tile.completedSamples;
+						output.blue = output.blue / tile.completedSamples;
+						
+						//Store render buffer
+						mainRenderer.renderBuffer[(x + (height - y)*width)*3 + 0] = output.red;
+						mainRenderer.renderBuffer[(x + (height - y)*width)*3 + 1] = output.green;
+						mainRenderer.renderBuffer[(x + (height - y)*width)*3 + 2] = output.blue;
+						
+						//And store the image data
+						//Note how imageData only stores 8-bit precision for each color channel.
+						//This is why we use the renderBuffer for the running average as it just contains
+						//the full precision color values
+						mainRenderer.image->data[(x + (height - y)*width)*3 + 0] =
+						(unsigned char)min( max(output.red*255.0,0), 255.0);
+						mainRenderer.image->data[(x + (height - y)*width)*3 + 1] =
+						(unsigned char)min( max(output.green*255.0,0), 255.0);
+						mainRenderer.image->data[(x + (height - y)*width)*3 + 2] =
+						(unsigned char)min( max(output.blue*255.0,0), 255.0);
 					}
-
-					incidentRay.direction = direction;
-					incidentRay.rayType = rayTypeIncident;
-					incidentRay.remainingInteractions = mainRenderer.scene->camera->bounces;
-					incidentRay.currentMedium.IOR = AIR_IOR;
-
-					//For multi-sample rendering, we keep a running average of color values for each pixel
-					//The next block of code does this
-
-					//Get previous color value from render buffer
-					struct color output = getPixel(x, y);
-					struct color sample = {0.0,0.0,0.0,0.0};
-
-					//Get new sample (raytracing is initiated here)
-					if (mainRenderer.newRenderer) {
-						sample = newTrace(&incidentRay, mainRenderer.scene);
-					} else {
-						sample = rayTrace(&incidentRay, mainRenderer.scene);
-					}
-
-					//And process the running average
-					output.red = output.red * (tile.completedSamples - 1);
-					output.green = output.green * (tile.completedSamples - 1);
-					output.blue = output.blue * (tile.completedSamples - 1);
-
-					output = addColors(&output, &sample);
-
-					output.red = output.red / tile.completedSamples;
-					output.green = output.green / tile.completedSamples;
-					output.blue = output.blue / tile.completedSamples;
-
-					//Store render buffer
-					mainRenderer.renderBuffer[(x + (height - y)*width)*3 + 0] = output.red;
-					mainRenderer.renderBuffer[(x + (height - y)*width)*3 + 1] = output.green;
-					mainRenderer.renderBuffer[(x + (height - y)*width)*3 + 2] = output.blue;
-
-					// print the colors
-					// printf("R: %f, G: %f, B: %f\r\n", output.red, output.green, output.blue);
 				}
+				tile.completedSamples++;
+				printf("sample %d done\n", tile.completedSamples);
 			}
-			tile.completedSamples++;
-
-			printf("sample %d done\n", tile.completedSamples);
-
-			//Pause rendering when bool is set
-			while (mainRenderer.renderPaused) {
-				sleepMSec(100);
-				if (!mainRenderer.renderPaused) break;
-			}
+			//Tile has finished rendering, get a new one and start rendering it.
+			mainRenderer.renderTiles[tile.tileNum].isRendering = false;
+			//time(&tile.stop);
+			tile = getTile();
 		}
-		//Tile has finished rendering, get a new one and start rendering it.
-		mainRenderer.renderTiles[tile.tileNum].isRendering = false;
-		tile = getTile();
-
-		printf("Tile %d done\n", mainRenderer.renderedTileCount);
-	}
+		mainRenderer.isRendering = false;
+		return 0;
 }

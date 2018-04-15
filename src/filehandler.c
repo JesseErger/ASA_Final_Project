@@ -84,6 +84,71 @@ void saveBmpFromArray(const char *filename, unsigned char *imgData, int width, i
 	fclose(f);
 }
 
+void encodePNGFromArray(const char *filename, unsigned char *imgData, int width, int height) {
+	unsigned error = lodepng_encode24_file(filename, imgData, width, height);
+	if (error) printf("error %u: %s\n", error, lodepng_error_text(error));
+}
+
+void printFileSize(char *fileName) {
+	//We determine the file size after saving, because the lodePNG library doesn't have a way to tell the compressed file size
+	//This will work for all image formats
+	long bytes, kilobytes, megabytes, gigabytes, terabytes; // <- Futureproofing?!
+	bytes = getFileSize(fileName);
+	if (fileName) free(fileName);
+	kilobytes = bytes / 1000;
+	megabytes = kilobytes / 1000;
+	gigabytes = megabytes / 1000;
+	terabytes = gigabytes / 1000;
+	
+	if (gigabytes > 1000) {
+		printf("Wrote %ldTB to file.\n", terabytes);
+	} else if (megabytes > 1000) {
+		printf("Wrote %ldGB to file.\n", gigabytes);
+	} else if (kilobytes > 1000) {
+		printf("Wrote %ldMB to file.\n", megabytes);
+	} else if (bytes > 1000) {
+		printf("Wrote %ldKB to file.\n", kilobytes);
+	} else {
+		printf("Wrote %ldB to file.\n", bytes);
+	}
+	
+}
+
+void writeImage(struct outputImage *img) {
+	switch (mainRenderer.mode) {
+		case saveModeNormal: {
+			//Save image data to a file
+			int bufSize;
+			if (img->count < 100) {
+				bufSize = 26;
+			} else if (img->count < 1000) {
+				bufSize = 27;
+			} else {
+				bufSize = 28;
+			}
+			char *buf = (char*)calloc(bufSize, sizeof(char));
+			
+			if (img->fileType == bmp){
+				sprintf(buf, "%s%s_%d.bmp", img->filePath, img->fileName, img->count);
+				printf("Saving result in \"%s\"\n", buf);
+				saveBmpFromArray(buf, img->data, img->size.width, img->size.height);
+			} else  if (img->fileType == png){
+				sprintf(buf, "%s%s_%d.png", img->filePath, img->fileName, img->count);
+				printf("Saving result in \"%s\"\n", buf);
+				encodePNGFromArray(buf, img->data, img->size.width, img->size.height);
+			}
+			printFileSize(buf);
+		}
+		break;
+		case saveModeNone:
+			printf("Image won't be saved!\n");
+			break;
+		default:
+			break;
+	}
+	
+}
+
 int getFileSize(char *fileName) {
 	FILE *file;
 	file = fopen(fileName, "r");

@@ -16,11 +16,9 @@
 #include "scene.h"
 
 int getFileSize(char *fileName);
-int getSysCores();
 void freeMem();
 
 extern struct renderer mainRenderer;
-extern struct poly *polygonArray;
 
 void initRenderer(struct renderer *renderer) {
 	renderer->renderBuffer = NULL;
@@ -30,15 +28,22 @@ void initRenderer(struct renderer *renderer) {
 	renderer->mode = saveModeNormal;
 	renderer->isRendering = false;
 	renderer->renderPaused = false;
-	renderer->avgTileTime = (time_t)1;
+	//renderer->avgTileTime = (time_t)1;
 	renderer->timeSampleCount = 1;
-	
 	renderer->scene = (struct world*)calloc(1, sizeof(struct world));
 }
 
+/**
+Main entry point
+
+@param argc Argument count
+@param argv Arguments
+@return Error codes, 0 if exited normally
+*/
 int main(int argc, char *argv[]) {
-	//Seed RNGs
-	// TODO: pick a random seed
+
+	//time_t start, stop;
+
 	srand(1);
 
 	//Initialize renderer
@@ -46,82 +51,78 @@ int main(int argc, char *argv[]) {
 
 	//Build the scene
 	switch (testBuild(&mainRenderer)) {
-		case -1:
-			logHandler(sceneBuildFailed);
-			break;
-		case -2:
-			logHandler(sceneParseErrorMalloc);
-			break;
-		case 4:
-			logHandler(sceneDebugEnabled);
-			return 0;
-			break;
-		default:
-			break;
+	case -1:
+		logHandler(sceneBuildFailed);
+		break;
+	case -2:
+		logHandler(sceneParseErrorMalloc);
+		break;
+	case 4:
+		logHandler(sceneDebugEnabled);
+		return 0;
+		break;
+	default:
+		break;
 	}
-
-	//Check and set threadCount
-	if (mainRenderer.threadCount <= 0) {
-		mainRenderer.threadCount = 1;
-	}
-
 	//Quantize image into renderTiles
 	quantizeImage();
 	//Compute the focal length for the camera
 	computeFocalLength(&mainRenderer);
-	
-	//Verify sample count
-	if (mainRenderer.sampleCount < 1) logHandler(renderErrorInvalidSampleCount);
-	if (!mainRenderer.scene->camera->areaLights) mainRenderer.sampleCount = 1;
-	
-	printf("\nStarting C-ray renderer for frame %i\n\n", mainRenderer.scene->camera->currentFrame);
-	
-	
-	printf("Rendering at %i x %i\n", mainRenderer.image->size.width,mainRenderer.image->size.height);
-	printf("Rendering with %i samples\n", mainRenderer.sampleCount);
-	printf("Rendering with %d thread",mainRenderer.threadCount);
-	if (mainRenderer.threadCount > 1) {
-		printf("s\n");
-	} else {
-		printf("\n");
-	}
+	//This is a timer to elapse how long a render takes per frame
+	//time(&start);
 
+	//Verify sample count
+	//if (mainRenderer.sampleCount < 1) logHandler(renderErrorInvalidSampleCount);
+	if (!mainRenderer.scene->camera->areaLights) mainRenderer.sampleCount = 1;
+
+	printf("\nStarting C-ray renderer for frame %i\n\n", mainRenderer.scene->camera->currentFrame);
+
+
+	printf("Rendering at %i x %i\n", mainRenderer.image->size.width, mainRenderer.image->size.height);
+	printf("Rendering with %i samples\n", mainRenderer.sampleCount);
 	printf("Using %i light bounces\n", mainRenderer.scene->camera->bounces);
 	printf("Raytracing...\n");
-	
+
 	//Allocate memory and create array of pixels for image data
 	//mainRenderer.image->data = (unsigned char*)calloc(3 * mainRenderer.image->size.width * mainRenderer.image->size.height, sizeof(unsigned char));
-	
+
 	//Allocate memory for render buffer
 	//Render buffer is used to store accurate color values for the renderers' internal use
-	mainRenderer.renderBuffer = (double*)calloc(3 * mainRenderer.image->size.width * mainRenderer.image->size.height, sizeof(double));
+	mainRenderer.renderBuffer = (double*)calloc(4 * mainRenderer.image->size.width * mainRenderer.image->size.height, sizeof(double));
+
+	//Allocate memory for render UI buffer
+	//This buffer is used for storing UI stuff like currently rendering tile highlights
+	//mainRenderer.uiBuffer = (unsigned char*)calloc(4 * mainRenderer.image->size.width * mainRenderer.image->size.height, sizeof(unsigned char));
+
+
+
+	//if (!mainRenderer.image->data) logHandler(imageMallocFailed);
 
 	mainRenderer.isRendering = true;
 	mainRenderer.renderAborted = false;
-
-	renderThread(&mainRenderer.renderThreadInfo[0]);
-	
+	//Main loop (input)
+	renderThread();
+	//time(&stop);
 	//Write to file
-	//writeImage(mainRenderer.image);
-	// TODO: add some printing code
-	
+	writeImage(mainRenderer.image);
+
 	mainRenderer.scene->camera->currentFrame++;
-	
+
 	freeMem();
-	
+
 	printf("Render finished, exiting.\n");
-	
+
 	return 0;
 }
-
-
 /**
- Free dynamically allocated memory
- */
+Free dynamically allocated memory
+*/
 void freeMem() {
 	//Free memory
 	if (mainRenderer.image->data)
 		free(mainRenderer.image->data);
+	if (mainRenderer.renderThreadInfo)
+		free(mainRenderer.renderThreadInfo);
 	if (mainRenderer.renderBuffer)
 		free(mainRenderer.renderBuffer);
 	if (mainRenderer.uiBuffer)
@@ -146,10 +147,21 @@ void freeMem() {
 
 
 /**
- Sleep for a given amount of milliseconds
+Sleep for a given amount of milliseconds
 
- @param ms Milliseconds to sleep for
- */
+@param ms Milliseconds to sleep for
+*/
 void sleepMSec(int ms) {
+#ifdef WINDOWS
+	Sleep(ms);
+#else
 	usleep(ms * 1000);
+#endif
 }
+
+
+/**
+Get amount of logical processing cores on the system
+
+@return Amount of logical processing cores
+*/

@@ -3,13 +3,14 @@
 //  C-Ray
 //
 //  Created by Valtteri Koskivuori on 07/02/2017.
-//  Copyright Â© 2017 Valtteri Koskivuori. All rights reserved.
+//  Copyright © 2017 Valtteri Koskivuori. All rights reserved.
 //
 
 #include "includes.h"
 #include "transforms.h"
 
 #include "light.h"
+
 
 //For ease of use
 double toRadians(double degrees) {

@@ -12,31 +12,15 @@
 #include "camera.h"
 #include "light.h"
 #include "obj_parser.h"
+#include "obj.h"
 #include "filehandler.h"
+#include "converter.h"
 #include "renderer.h"
 
 #define TOKEN_DEBUG_ENABLED false
 
 char *trimSpaces(char *inputLine);
 
-/**
- Extract the filename from a given file path
-
- @param input File path to be processed
- @return Filename string, including file type extension
- */
-char *getFileName(char *input) {
-	char *fn;
-
-	/* handle trailing '/' e.g.
-	 input == "/home/me/myprogram/" */
-	if (input[(strlen(input) - 1)] == '/')
-		input[(strlen(input) - 1)] = '\0';
-
-	(fn = strrchr(input, '/')) ? ++fn : (fn = input);
-
-	return fn;
-}
 
 //FIXME: change + 1 to ++scene->someCount and just pass the count to array access
 //In the future, maybe just pass a list and size and copy at once to save time (large counts)
@@ -45,12 +29,15 @@ void addSphere(struct world *scene, struct sphere newSphere) {
 	scene->spheres[scene->sphereCount++] = newSphere;
 }
 
+void addMaterial(struct world *scene, struct material newMaterial) {
+	scene->materials = (struct material*)realloc(scene->materials, (scene->materialCount + 1) * sizeof(struct material));
+	scene->materials[scene->materialCount++] = newMaterial;
+}
+
 void addLight(struct world *scene, struct light newLight) {
 	scene->lights = (struct light*)realloc(scene->lights, (scene->lightCount + 1) * sizeof(struct light));
 	scene->lights[scene->lightCount++] = newLight;
 }
-
-
 
 
 //FIXME: Move this to transforms.c
@@ -69,12 +56,9 @@ int testBuild(struct renderer *r) {
 	printf("Starting SceneBuilder V0.5\n\n");
 	
 	//MATERIALS
-	/*
 	addMaterial(r->scene, newMaterialFull(colorWithValues(0.1, 0.05, 0.05, 0.0),
 										colorWithValues(0.6, 0.1, 0.1, 0.0),
 										colorWithValues(1, 0.2, 0.2, 0.0), .2, .1, 0, 0, 0, 20.)); //Matte red
-
-
 
 	addMaterial(r->scene, newMaterial(colorWithValues(0.1, 0.1, 0.1, 0.0), 0.0)); //Matte green
 	addMaterial(r->scene, newMaterial(colorWithValues(0.1, 0.1, 0.2, 0.0), 0.0)); //Matte blue
@@ -86,7 +70,7 @@ int testBuild(struct renderer *r) {
 	addMaterial(r->scene, newMaterial(colorWithValues(0.0, 0.0, 0.3, 0.0), 0.0));
 	addMaterial(r->scene, newMaterial(colorWithValues(0.9, 0.9, 0.9, 0.0), 0.0));
 	addMaterial(r->scene, newMaterial(colorWithValues(1.0, 0.0, 0.0, 0.0), 0.0));
-	*/
+	
 	//Output image prefs
 	r->image = (struct outputImage*)calloc(1, sizeof(struct outputImage));
 	r->image->filePath = "output/";
@@ -95,14 +79,13 @@ int testBuild(struct renderer *r) {
 	r->image->size.width = 1280;
 	r->image->size.height = 800;
 	r->image->fileType = png;
-
+	
 	//Renderer prefs
-	r->threadCount = 0; //Override, 0 defaults to physical core count
 	r->sampleCount = 25;
 	r->antialiasing = true;
 	r->newRenderer = true; //New, recursive rayTracing algorighm (buggy!)
-	r->tileWidth = 128;
-	r->tileHeight = 128;
+	r->tileWidth = 1280;
+	r->tileHeight = 800;
 	
 	//Camera prefs
 	//TODO: Move camera to renderer
@@ -134,6 +117,8 @@ int testBuild(struct renderer *r) {
 	r->scene->ambientColor->green = 0.6;
 	r->scene->ambientColor-> blue = 0.6;
 	
+	
+	
 	//LIGHTS
 	
 	addLight(r->scene, newLight(vectorWithPos(970, 450, 500), 50, colorWithValues(2, 2, 4, 0)));
@@ -141,14 +126,35 @@ int testBuild(struct renderer *r) {
 
 	addLight(r->scene, newLight(vectorWithPos(1160, 400, 0),    13, colorWithValues(0.2, 0.2, 0.2, 0.0)));
 	addLight(r->scene, newLight(vectorWithPos(760 , 500, 0),    42, colorWithValues(0.2, 0.2, 0.2, 0.0)));
-	//addLight(r->scene, newLight(vectorWithPos(640 , 350, 600), 200, colorWithValues(6.0, 0.0, 0.0, 0.0)));
-	//addLight(r->scene, newLight(vectorWithPos(940 , 350, 600), 200, colorWithValues(0.0, 6.0, 0.0, 0.0)));
-	//addLight(r->scene, newLight(vectorWithPos(1240, 350, 600), 200, colorWithValues(0.0, 0.0, 6.0, 0.0)));
+	addLight(r->scene, newLight(vectorWithPos(640 , 350, 600), 200, colorWithValues(6.0, 0.0, 0.0, 0.0)));
+	addLight(r->scene, newLight(vectorWithPos(940 , 350, 600), 200, colorWithValues(0.0, 6.0, 0.0, 0.0)));
+	addLight(r->scene, newLight(vectorWithPos(1240, 350, 600), 200, colorWithValues(0.0, 0.0, 6.0, 0.0)));
 	
-	//addSphere(r->scene, newSphere(vectorWithPos(650, 450, 1650), 150, 5));
-	//addSphere(r->scene, newSphere(vectorWithPos(950, 350, 1500), 50, 6));
-	//addSphere(r->scene, newSphere(vectorWithPos(1100, 350, 1500), 50, 8));
-return 0;
+	addSphere(r->scene, newSphere(vectorWithPos(650, 450, 1650), 150, 5));
+	addSphere(r->scene, newSphere(vectorWithPos(950, 350, 1500), 50, 6));
+	addSphere(r->scene, newSphere(vectorWithPos(1100, 350, 1500), 50, 8));
+	
+	if (TOKEN_DEBUG_ENABLED) {
+		return 4; //Debug mode - Won't render anything
+	} else {
+		return 0;
+	}
 }
 
-
+//Removes tabs and spaces from a char byte array, terminates it and returns it.
+char *trimSpaces(char *inputLine) {
+	int i, j;
+	char *outputLine = inputLine;
+	for (i = 0, j = 0; i < strlen(inputLine); i++, j++) {
+		if (inputLine[i] == ' ') { //Space
+			j--;
+		} else if (inputLine[i] == '\t') { //Tab
+			j--;
+		} else {
+			outputLine[j] = inputLine[i];
+		}
+	}
+	//Add null termination byte
+	outputLine[j] = '\0';
+	return outputLine;
+}
