@@ -1,8 +1,0 @@
-debug: *.c
-	gcc *.c -o ../raytracer -I. -lm -pthread -pg -O1
-
-release: *.c
-	gcc *.c -o ../raytracer -I. -lm -pthread -O3
-
-clean:
-	$(rm) raytracer
