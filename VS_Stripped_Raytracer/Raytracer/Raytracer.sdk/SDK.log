@@ -1,0 +1,20 @@
+11:40:56 INFO  : Registering command handlers for SDK TCF services
+11:40:58 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\Jiahua\Documents\Vivaldo\Raytracer\Raytracer.sdk\temp_xsdb_launch_script.tcl
+11:41:02 INFO  : XSCT server has started successfully.
+11:41:07 INFO  : Successfully done setting XSCT server connection channel  
+11:41:07 INFO  : Successfully done setting SDK workspace  
+11:41:07 INFO  : Processing command line option -hwspec C:/Users/Jiahua/Documents/Vivaldo/Raytracer/Raytracer.sdk/System_wrapper.hdf.
+13:27:21 ERROR : Interrupted exception while waiting for the completion of command ' ::hsi::utils::set_current_hw_sw C:/Users/Jiahua/Documents/Vivaldo/Raytracer/Raytracer.sdk/System_wrapper_hw_platform_0/system.hdf C:/Users/Jiahua/Documents/Vivaldo/Raytracer/Raytracer.sdk/standalone_bsp_0/system.mss '
+13:57:19 INFO  : Registering command handlers for SDK TCF services
+13:57:20 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\Jiahua\Documents\Vivaldo\Raytracer\Raytracer.sdk\temp_xsdb_launch_script.tcl
+13:57:23 INFO  : XSCT server has started successfully.
+13:57:23 INFO  : Successfully done setting XSCT server connection channel  
+13:57:23 INFO  : Processing command line option -hwspec C:/Users/Jiahua/Documents/Vivaldo/Raytracer/Raytracer.sdk/System_wrapper.hdf.
+13:57:23 INFO  : Checking for hwspec changes in the project System_wrapper_hw_platform_0.
+13:57:23 INFO  : Successfully done setting SDK workspace  
+10:10:26 INFO  : Registering command handlers for SDK TCF services
+10:10:26 INFO  : Launching XSCT server: xsct.bat -interactive C:\CS_App_Accel\Final_Project\ASA_Final_Project\Raytracer\Raytracer.sdk\temp_xsdb_launch_script.tcl
+10:10:29 INFO  : XSCT server has started successfully.
+10:10:29 INFO  : Successfully done setting XSCT server connection channel  
+10:10:29 INFO  : Successfully done setting SDK workspace  
+10:10:29 INFO  : Processing command line option -hwspec C:/CS_App_Accel/Final_Project/ASA_Final_Project/Raytracer/Raytracer.sdk/System_wrapper.hdf.
