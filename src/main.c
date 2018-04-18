@@ -14,7 +14,17 @@
 #include "filehandler.h"
 #include "renderer.h"
 #include "scene.h"
-
+#include "xparameters.h"
+#define DYNCLK_BASEADDR 		XPAR_AXI_DYNCLK_0_BASEADDR
+#define VDMA_ID 				XPAR_AXIVDMA_0_DEVICE_ID
+#define HDMI_OUT_VTC_ID 		XPAR_V_TC_OUT_DEVICE_ID
+#define HDMI_IN_VTC_ID 			XPAR_V_TC_IN_DEVICE_ID
+#define HDMI_IN_GPIO_ID 		XPAR_AXI_GPIO_VIDEO_DEVICE_ID
+#define HDMI_IN_VTC_IRPT_ID 	XPAR_FABRIC_V_TC_IN_IRQ_INTR
+#define HDMI_IN_GPIO_IRPT_ID 	XPAR_FABRIC_AXI_GPIO_VIDEO_IP2INTC_IRPT_INTR
+#define SCU_TIMER_ID 			XPAR_SCUTIMER_DEVICE_ID
+#define UART_BASEADDR 			XPAR_PS7_UART_1_BASEADDR
+#define DDR_BASE				XPAR_PS7_DDR_0_S_AXI_BASEADDR
 int getFileSize(char *fileName);
 void freeMem();
 
@@ -27,7 +37,6 @@ void initRenderer(struct renderer *renderer) {
 	renderer->renderedTileCount = 0;
 	renderer->mode = saveModeNormal;
 	renderer->isRendering = false;
-	renderer->renderPaused = false;
 	//renderer->avgTileTime = (time_t)1;
 	renderer->timeSampleCount = 1;
 	renderer->scene = (struct world*)calloc(1, sizeof(struct world));
@@ -41,7 +50,7 @@ Main entry point
 @return Error codes, 0 if exited normally
 */
 int main(int argc, char *argv[]) {
-
+	printf("\nStarting C-ray renderer");
 	//time_t start, stop;
 
 	srand(1);
@@ -84,22 +93,24 @@ int main(int argc, char *argv[]) {
 	printf("Raytracing...\n");
 
 	//Allocate memory and create array of pixels for image data
-	//mainRenderer.image->data = (unsigned char*)calloc(3 * mainRenderer.image->size.width * mainRenderer.image->size.height, sizeof(unsigned char));
+	//unsigned char image_data_array [3 * mainRenderer.image->size.width * mainRenderer.image->size.height];
+/*
+	mainRenderer.image->data = (unsigned char *) DDR_BASE;
+
+    mainRenderer.renderBuffer =(double *) DDR_BASE+(3 * mainRenderer.image->size.width * mainRenderer.image->size.height);
+    */
+	//Allocate memory and create array of pixels for image data
+	mainRenderer.image->data = (unsigned char*)calloc(3 * mainRenderer.image->size.width * mainRenderer.image->size.height, sizeof(unsigned char));
 
 	//Allocate memory for render buffer
 	//Render buffer is used to store accurate color values for the renderers' internal use
-	mainRenderer.renderBuffer = (double*)calloc(4 * mainRenderer.image->size.width * mainRenderer.image->size.height, sizeof(double));
-
+	mainRenderer.renderBuffer = (double*)calloc(3 * mainRenderer.image->size.width * mainRenderer.image->size.height, sizeof(double));
 	//Allocate memory for render UI buffer
 	//This buffer is used for storing UI stuff like currently rendering tile highlights
 	//mainRenderer.uiBuffer = (unsigned char*)calloc(4 * mainRenderer.image->size.width * mainRenderer.image->size.height, sizeof(unsigned char));
 
 
-
-	//if (!mainRenderer.image->data) logHandler(imageMallocFailed);
-
 	mainRenderer.isRendering = true;
-	mainRenderer.renderAborted = false;
 	//Main loop (input)
 	renderThread();
 	//time(&stop);
@@ -125,8 +136,6 @@ void freeMem() {
 		free(mainRenderer.renderThreadInfo);
 	if (mainRenderer.renderBuffer)
 		free(mainRenderer.renderBuffer);
-	if (mainRenderer.uiBuffer)
-		free(mainRenderer.uiBuffer);
 	if (mainRenderer.scene->lights)
 		free(mainRenderer.scene->lights);
 	if (mainRenderer.scene->spheres)

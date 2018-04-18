@@ -73,19 +73,19 @@ int testBuild(struct renderer *r) {
 	
 	//Output image prefs
 	r->image = (struct outputImage*)calloc(1, sizeof(struct outputImage));
-	r->image->filePath = "output/";
+	r->image->filePath = "C:/Users/new user/Desktop/";
 	r->image->fileName = "rendered";
 	r->image->count = 0;
-	r->image->size.width = 1280;
-	r->image->size.height = 800;
+	r->image->size.width = 640;
+	r->image->size.height = 480;
 	r->image->fileType = png;
 	
 	//Renderer prefs
 	r->sampleCount = 25;
 	r->antialiasing = true;
 	r->newRenderer = true; //New, recursive rayTracing algorighm (buggy!)
-	r->tileWidth = 1280;
-	r->tileHeight = 800;
+	r->tileWidth = 640;
+	r->tileHeight = 480;
 	
 	//Camera prefs
 	//TODO: Move camera to renderer
@@ -102,7 +102,7 @@ int testBuild(struct renderer *r) {
 	r->scene->camera->areaLights = true;
 	
 	//comment this block, and uncomment the next block below to toggle the detailed view of the lighting bug
-	addCamTransform(r->scene->camera, newTransformTranslate(970, 480, 600)); //Set pos here
+	addCamTransform(r->scene->camera, newTransformTranslate(960, 480, 480)); //Set pos here
 	addCamTransform(r->scene->camera, newTransformRotateX(21));//And add as many rotations as you want!
 	addCamTransform(r->scene->camera, newTransformRotateZ(9)); //Don't scale or translate!
 	transformCameraIntoView(r->scene->camera);

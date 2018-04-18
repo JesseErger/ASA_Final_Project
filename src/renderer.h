@@ -42,18 +42,14 @@ struct renderer {
 	struct threadInfo *renderThreadInfo; //Info about threads
 
 	struct world *scene; //Scene to render
-	char *inputFilePath; //Directory to load input files from
 	struct outputImage *image; //Output image
 	struct renderTile *renderTiles; //Array of renderTiles to render
 	int tileCount; //Total amount of render tiles
 	enum fileMode mode;
 	int renderedTileCount; //Completed render tiles
 	double *renderBuffer;  //Double-precision buffer for multisampling
-	unsigned char *uiBuffer; //UI element buffer
 	int activeThreads; //Amount of threads currently rendering
 	bool isRendering;
-	bool renderPaused; //SDL listens for P key pressed, which sets this
-	bool renderAborted;//SDL listens for X key pressed, which sets this
 	bool smoothShading;//Unused
 	//time_t avgTileTime;//Used for render duration estimation
 	int timeSampleCount;//Used for render duration estimation, amount of time samples captured

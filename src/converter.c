@@ -25,17 +25,9 @@ struct vector vectorFromObj(obj_vector *vec) {
 	vector.isTransformed = false;
 	return vector;
 }
-
-/**
- Convert a given OBJ loader polygon into a c-ray polygon
- 
-
-
-/**
+/*
  Convert a given OBJ loader material into a c-ray material
  
- @param mat OBJ loader material
- @return c-ray material
  */
 struct material materialFromObj(obj_material *mat) {
 	struct material newMat;

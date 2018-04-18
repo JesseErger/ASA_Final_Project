@@ -83,11 +83,22 @@ void saveBmpFromArray(const char *filename, unsigned char *imgData, int width, i
 	}
 	fclose(f);
 }
-
+/*
 void encodePNGFromArray(const char *filename, unsigned char *imgData, int width, int height) {
 	unsigned error = lodepng_encode24_file(filename, imgData, width, height);
 	if (error) printf("error %u: %s\n", error, lodepng_error_text(error));
 }
+*/
+void encodePNGFromArray(const char *filename, unsigned char *imgData, int width, int height) {
+	for (int y = 0; y < 50*50; y++) {
+		printf("Image data %c at index %i\n",*(imgData+y),y);
+	}
+//unsigned error = lodepng_encode24_file(filename, imgData, width, height);
+//if (error) printf("error %u: %s\n", error, lodepng_error_text(error));
+ }
+
+
+
 
 void printFileSize(char *fileName) {
 	//We determine the file size after saving, because the lodePNG library doesn't have a way to tell the compressed file size

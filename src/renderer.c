@@ -47,36 +47,47 @@ struct renderTile getTile() {
 void quantizeImage() {
 	printf("Quantizing render plane...\n");
 	
+	//Sanity check on tilesizes
+	if (mainRenderer.tileWidth >= mainRenderer.image->size.width) mainRenderer.tileWidth = mainRenderer.image->size.width;
+	if (mainRenderer.tileHeight >= mainRenderer.image->size.height) mainRenderer.tileHeight = mainRenderer.image->size.height;
+	if (mainRenderer.tileWidth <= 0) mainRenderer.tileWidth = 1;
+	if (mainRenderer.tileHeight <= 0) mainRenderer.tileHeight = 1;
 
-	
-	int tilesX = 1;
-	int tilesY = 1;
-	
+	int tilesX = mainRenderer.image->size.width / mainRenderer.tileWidth;
+	int tilesY = mainRenderer.image->size.height / mainRenderer.tileHeight;
+
+	tilesX = (mainRenderer.image->size.width % mainRenderer.tileWidth) != 0 ? tilesX + 1: tilesX;
+	tilesY = (mainRenderer.image->size.height % mainRenderer.tileHeight) != 0 ? tilesY + 1: tilesY;
+
 	mainRenderer.renderTiles = (struct renderTile*)calloc(tilesX*tilesY, sizeof(struct renderTile));
 	if (mainRenderer.renderTiles == NULL) {
 		printf("Failed to allocate renderTiles array!\n");
 		abort();
 	}
-	
 
-	struct renderTile *tile = &mainRenderer.renderTiles[0];
-	tile->width  = 1280;
-	tile->height = 800;
+	for (int y = 0; y < tilesY; y++) {
+		for (int x = 0; x < tilesX; x++) {
+			struct renderTile *tile = &mainRenderer.renderTiles[x + y*tilesX];
+			tile->width  = mainRenderer.tileWidth;
+			tile->height = mainRenderer.tileHeight;
 
-	tile->startX = 0;
-	tile->endX   = 1280;
+			tile->startX = x       * mainRenderer.tileWidth;
+			tile->endX   = (x + 1) * mainRenderer.tileWidth;
 
-	tile->startY = 0;
-	tile->endY   = 800;
+			tile->startY = y       * mainRenderer.tileHeight;
+			tile->endY   = (y + 1) * mainRenderer.tileHeight;
 
+			tile->endX = min((x + 1) * mainRenderer.tileWidth, mainRenderer.image->size.width);
+			tile->endY = min((y + 1) * mainRenderer.tileHeight, mainRenderer.image->size.height);
 
-	//Samples have to start at 1, so the running average works
-	tile->completedSamples = 1;
-	tile->isRendering = false;
-	tile->tileNum = mainRenderer.tileCount;
+			//Samples have to start at 1, so the running average works
+			tile->completedSamples = 1;
+			tile->isRendering = false;
+			tile->tileNum = mainRenderer.tileCount;
 
-	mainRenderer.tileCount++;
-
+			mainRenderer.tileCount++;
+		}
+	}
 	printf("Quantized image into %i tiles. (%ix%i)", (tilesX*tilesY), tilesX, tilesY);
 }
 
@@ -125,15 +136,12 @@ int renderThread() {
 			while (tile.completedSamples < mainRenderer.sampleCount+1 && mainRenderer.isRendering) {
 				for (int y = tile.endY; y > tile.startY; y--) {
 					for (int x = tile.startX; x < tile.endX; x++) {
-						if(y==794 && x==511){
-							printf("crashes when x = 512 on getPixel(x, y)");
-						}
 						int height = mainRenderer.image->size.height;
 						int width = mainRenderer.image->size.width;
 						
 						double fracX = (double)x;
 						double fracY = (double)y;
-						
+
 						//A cheap 'antialiasing' of sorts. The more samples, the better this works
 						if (mainRenderer.antialiasing) {
 							fracX = getRandomDouble(fracX - 0.25, fracX + 0.25);
