@@ -165,6 +165,7 @@ double renderThread() {
 		u8 prescaler = 0;
 		XScuTimer_SetPrescaler(&Timer, prescaler);
 		double total_run_time = 0;
+		double prev_run_time = 0;
 		//End Timer Code
 
 		struct lightRay incidentRay;
@@ -175,8 +176,8 @@ double renderThread() {
 			printf("Starting tile %i, sample %d\n", tile.tileNum, tile.completedSamples);
 			XScuTimer_Start(&Timer);
 			while (tile.completedSamples < mainRenderer.sampleCount+1 && mainRenderer.isRendering) {
-				XScuTimer_RestartTimer(&Timer);
 				for (int y = tile.endY; y > tile.startY; y--) {
+					XScuTimer_RestartTimer(&Timer);
 					for (int x = tile.startX; x < tile.endX; x++) {
 						int height = mainRenderer.image->size.height;
 						int width = mainRenderer.image->size.width;
@@ -271,13 +272,14 @@ double renderThread() {
 						mainRenderer.image->data[(x + (height - y)*width)*3 + 2] =
 						(unsigned char)min( max(output.blue*255.0,0), 255.0);
 					}
+					CntValue1 = XScuTimer_GetCounterValue(&Timer);
+					cycles = TIMER_LOAD_VALUE - CntValue1;
+					seconds = convert_to_seconds(cycles, prescaler);
+					total_run_time += seconds;
 				}
 				printf("sample %d done\n", tile.completedSamples);
-				CntValue1 = XScuTimer_GetCounterValue(&Timer);
-				cycles = TIMER_LOAD_VALUE - CntValue1;
-				seconds = convert_to_seconds(cycles, prescaler);
-				total_run_time += seconds;
-				printf("sample %d -> %f seconds\n",tile.completedSamples, seconds);
+				printf("sample %d -> %f seconds\n",tile.completedSamples, total_run_time-prev_run_time);
+				prev_run_time = total_run_time;
 				tile.completedSamples++;
 			}
 			//Tile has finished rendering, get a new one and start rendering it.

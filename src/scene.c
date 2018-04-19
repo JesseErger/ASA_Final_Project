@@ -76,16 +76,16 @@ int testBuild(struct renderer *r) {
 	r->image->filePath = "Need_To_Output_File_Somewhere";
 	r->image->fileName = "rendered";
 	r->image->count = 0;
-	r->image->size.width = 640;
-	r->image->size.height = 480;
+	r->image->size.width = 1280;
+	r->image->size.height = 1024;
 	r->image->fileType = png;
 	
 	//Renderer prefs
 	r->sampleCount = 25;
 	r->antialiasing = true;
 	r->newRenderer = true; //New, recursive rayTracing algorighm (buggy!)
-	r->tileWidth = 640;
-	r->tileHeight = 480;
+	r->tileWidth = 1280;
+	r->tileHeight = 1024;
 	
 	//Camera prefs
 	//TODO: Move camera to renderer
