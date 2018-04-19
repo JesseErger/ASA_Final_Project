@@ -14,8 +14,6 @@ struct material;
 struct sphere;
 struct camera;
 struct matrixTransform;
-struct poly;
-struct kdTreeNode;
 struct renderer;
 
 //World

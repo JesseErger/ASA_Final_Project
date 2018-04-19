@@ -64,7 +64,7 @@ struct renderer {
 
 
  //Renderer
-int renderThread();
+double renderThread();
 
  /*
 //Renderer

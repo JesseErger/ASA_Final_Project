@@ -73,7 +73,7 @@ int testBuild(struct renderer *r) {
 	
 	//Output image prefs
 	r->image = (struct outputImage*)calloc(1, sizeof(struct outputImage));
-	r->image->filePath = "C:/Users/new user/Desktop/";
+	r->image->filePath = "Need_To_Output_File_Somewhere";
 	r->image->fileName = "rendered";
 	r->image->count = 0;
 	r->image->size.width = 640;

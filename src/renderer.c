@@ -8,7 +8,6 @@
 
 #include "includes.h"
 #include "renderer.h"
-
 #include "camera.h"
 #include "light.h"
 #include "scene.h"
@@ -16,6 +15,24 @@
 #include "filehandler.h"
 #include "main.h"
 
+#include "xparameters.h"
+#include "xscutimer.h"
+#include <stdio.h>
+#include "xil_types.h"
+#include "xil_printf.h"
+
+
+#define TIMER_DEVICE_ID XPAR_SCUTIMER_DEVICE_ID
+// initial value to use for the SCU Private Timer's counter register
+#define TIMER_LOAD_VALUE 0xFFFFFFFF
+// PERIPHCLK, which is used by the Private Timer
+u32 PERIPHCLK = XPAR_PS7_CORTEXA9_0_CPU_CLK_FREQ_HZ / 2;
+// Cortex A9 SCU Private Timer Instance
+XScuTimer Timer;
+float convert_to_seconds(u32 cycles, u8 prescaler) {
+  // from Cortex A9 documentation
+  return ((float)((prescaler+1)*cycles)) / PERIPHCLK;
+}
 /*
  * Global renderer
  */
@@ -124,16 +141,41 @@ struct color getPixel(int x, int y) {
 	return output;
 }
 
-int renderThread() {
-		struct lightRay incidentRay;
+double renderThread() {
+		// Timer Code
+		int Status;
+		double seconds;
+		// used to store value of the SCU Private Timer's counter register
+		u32 CntValue1;
+		// pointer to SCU Private Timer configuration object
+		XScuTimer_Config *ConfigPtr;
 
+		// Find configuration
+		ConfigPtr = XScuTimer_LookupConfig(TIMER_DEVICE_ID);
+
+		// Initialize Timer
+		Status = XScuTimer_CfgInitialize(&Timer, ConfigPtr, ConfigPtr->BaseAddr);
+		if (Status != XST_SUCCESS) {
+		xil_printf("Timer Init Failed!\r\n");
+		}
+		// Load the timer counter register with initial value
+		XScuTimer_LoadTimer(&Timer, TIMER_LOAD_VALUE);
+		u32 cycles = 0;
+		// Set PRESCALER to 0 (i.e., decrement counter once every 1 cycles)
+		u8 prescaler = 0;
+		XScuTimer_SetPrescaler(&Timer, prescaler);
+		double total_run_time = 0;
+		//End Timer Code
+
+		struct lightRay incidentRay;
 		//First time setup for each thread
 		struct renderTile tile = getTile();
 		
 		while (tile.tileNum != -1) {
-			//time(&tile.start);
-			printf("Starting tile %i\n", tile.tileNum);
+			printf("Starting tile %i, sample %d\n", tile.tileNum, tile.completedSamples);
+			XScuTimer_Start(&Timer);
 			while (tile.completedSamples < mainRenderer.sampleCount+1 && mainRenderer.isRendering) {
+				XScuTimer_RestartTimer(&Timer);
 				for (int y = tile.endY; y > tile.startY; y--) {
 					for (int x = tile.startX; x < tile.endX; x++) {
 						int height = mainRenderer.image->size.height;
@@ -230,8 +272,13 @@ int renderThread() {
 						(unsigned char)min( max(output.blue*255.0,0), 255.0);
 					}
 				}
-				tile.completedSamples++;
 				printf("sample %d done\n", tile.completedSamples);
+				CntValue1 = XScuTimer_GetCounterValue(&Timer);
+				cycles = TIMER_LOAD_VALUE - CntValue1;
+				seconds = convert_to_seconds(cycles, prescaler);
+				total_run_time += seconds;
+				printf("sample %d -> %f seconds\n",tile.completedSamples, seconds);
+				tile.completedSamples++;
 			}
 			//Tile has finished rendering, get a new one and start rendering it.
 			mainRenderer.renderTiles[tile.tileNum].isRendering = false;
@@ -239,5 +286,5 @@ int renderThread() {
 			tile = getTile();
 		}
 		mainRenderer.isRendering = false;
-		return 0;
+		return total_run_time;
 }

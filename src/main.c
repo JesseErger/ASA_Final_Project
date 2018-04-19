@@ -111,10 +111,14 @@ int main(int argc, char *argv[]) {
 
 
 	mainRenderer.isRendering = true;
+	double run_time = 0;
 	//Main loop (input)
-	renderThread();
+	run_time = renderThread();
 	//time(&stop);
 	//Write to file
+	printf("Image Width -> %i\n",mainRenderer.image->size.width);
+	printf("Image Height -> %i\n",mainRenderer.image->size.height);
+	printf("Total run time -> %f\n", run_time);
 	writeImage(mainRenderer.image);
 
 	mainRenderer.scene->camera->currentFrame++;
