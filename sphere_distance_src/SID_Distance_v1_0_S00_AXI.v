@@ -15,8 +15,9 @@
 	)
 	(
 		// Users to add ports here
-        input wire [15:0] RootDiscriminant,
-        input wire [15:0] B,   
+        input wire [23:0] RootDiscriminant,
+        input wire [31:0] B,   
+        input wire [31:0] OldDistance,
         input wire QuickIntersects,
         input wire RootValid,
 
@@ -90,7 +91,7 @@
     reg InputValid;
     wire InputReady;
     wire Intersects;
-    wire [15:0] Distance;
+    wire [31:0] Distance;
 
 	// AXI4LITE signals
 	reg [C_S_AXI_ADDR_WIDTH-1 : 0] 	axi_awaddr;
@@ -422,7 +423,7 @@
 	   .RootDiscriminant(RootDiscriminant),
        .B(B),   
        .QuickIntersects(QuickIntersects),
-       .OldDistance(slv_reg0[15:0]),
+       .OldDistance(OldDistance),
        .CLK(S_AXI_ACLK),
        .aresetn(S_AXI_ARESETN),
        .Intersects(Intersects),

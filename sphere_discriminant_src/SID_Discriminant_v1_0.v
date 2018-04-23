@@ -16,8 +16,8 @@
 	(
 		// Users to add ports here
         output wire QuickIntersects,
-        output wire [15:0] Discriminant,
-        output wire [15:0] B_out,
+        output wire [31:0] Discriminant,
+        output wire [31:0] B_out,
         output wire OutputReady,
 
 		// User ports ends

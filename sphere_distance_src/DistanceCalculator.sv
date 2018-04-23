@@ -1,12 +1,12 @@
 `timescale 1ns / 1ps
 
 module DistanceCalculator(
-    input [15:0] RootDiscriminant,
-    input signed [15:0] B,   
+    input [23:0] RootDiscriminant,
+    input signed [31:0] B,   
     input QuickIntersects,
-    input [15:0] OldDistance,
+    input [31:0] OldDistance,
     output Intersects,
-    output [15:0] Distance,
+    output [31:0] Distance,
     input CLK,
     input aresetn,
     input InputValid,
@@ -15,24 +15,24 @@ module DistanceCalculator(
     );
     
     // state encodings
-    parameter waiting = 2'b000;
-    parameter reading = 2'b001;
-    parameter process = 2'b010;
+    parameter waiting = 2'b00;
+    parameter reading = 2'b01;
+    parameter process = 2'b10;
         
     // state control
     logic [1:0] nextState;
     logic [1:0] state;
         
     // input variables
-    logic [15:0] oldDistance;
+    logic [31:0] oldDistance;
     
     // output variables
     logic isects;
-    logic [15:0] distance;
+    logic [31:0] distance;
                   
     // internal logic variables
-    logic signed [15:0] t0;
-    logic signed [15:0] t1;
+    logic signed [31:0] t0;
+    logic signed [31:0] t1;
     
     // temp variables
     
