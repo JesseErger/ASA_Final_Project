@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER SID_Discriminant
+	OPTION supported_peripherals = (SID_Discriminant);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = SID_Discriminant;
+END DRIVER
