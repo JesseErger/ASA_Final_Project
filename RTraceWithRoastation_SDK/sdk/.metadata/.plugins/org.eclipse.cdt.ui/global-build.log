@@ -1,0 +1,2523 @@
+18:30:10 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:30:22 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:31:07 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scene.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scene.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/scene.d" -MT"src/scene.o" -o "src/scene.o" "../src/scene.c"
+'Finished building: ../src/scene.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274308	   5524	134359056	134638888	8066d28	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+18:31:13 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scene.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scene.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/scene.d" -MT"src/scene.o" -o "src/scene.o" "../src/scene.c"
+'Finished building: ../src/scene.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274052	   5524	134359056	134638632	8066c28	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+18:31:21 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:32:05 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scene.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scene.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/scene.d" -MT"src/scene.o" -o "src/scene.o" "../src/scene.c"
+'Finished building: ../src/scene.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274052	   5524	134359056	134638632	8066c28	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+18:32:10 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:33:54 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scene.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scene.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/scene.d" -MT"src/scene.o" -o "src/scene.o" "../src/scene.c"
+'Finished building: ../src/scene.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274436	   5524	134359056	134639016	8066da8	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+18:37:12 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:37:29 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:37:45 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:39:37 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274500	   5524	134359056	134639080	8066de8	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+18:40:34 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274404	   5524	134359056	134638984	8066d88	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+18:43:45 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'getInput':
+../src/main.c:194:2: error: parameter 'nextFrame' is initialized
+  int nextFrame = 0;
+  ^~~
+../src/main.c:195:2: error: parameter 'userInput' is initialized
+  char userInput = 0;
+  ^~~~
+../src/main.c:198:2: error: expected declaration specifiers before 'while'
+  while (XUartPs_IsReceiveData(UART_BASEADDR))
+  ^~~~~
+../src/main.c:203:2: error: expected declaration specifiers before 'while'
+  while (userInput != 'q')
+  ^~~~~
+../src/main.c:288:2: error: expected declaration specifiers before 'return'
+  return userInput;
+  ^~~~~~
+../src/main.c:289:1: error: expected declaration specifiers before '}' token
+ }
+ ^
+../src/main.c:295:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ void freeMem() {
+                ^
+../src/main.c:327:24: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ void sleepMSec(int ms) {
+                        ^
+../src/main.c:337:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ {
+ ^
+../src/main.c:412:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ {
+ ^
+../src/main.c:195:7: error: declaration for parameter 'userInput' but no such parameter
+  char userInput = 0;
+       ^~~~~~~~~
+../src/main.c:194:6: error: declaration for parameter 'nextFrame' but no such parameter
+  int nextFrame = 0;
+      ^~~~~~~~~
+../src/main.c:415:1: error: expected '{' at end of input
+ }
+ ^
+../src/main.c:415:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/main.o] Error 1
+18:43:52 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'getInput':
+../src/main.c:198:9: warning: implicit declaration of function 'XUartPs_IsReceiveData' [-Wimplicit-function-declaration]
+  while (XUartPs_IsReceiveData(UART_BASEADDR))
+         ^~~~~~~~~~~~~~~~~~~~~
+../src/main.c:200:3: warning: implicit declaration of function 'XUartPs_ReadReg' [-Wimplicit-function-declaration]
+   XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
+   ^~~~~~~~~~~~~~~
+../src/main.c:200:34: error: 'XUARTPS_FIFO_OFFSET' undeclared (first use in this function)
+   XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
+                                  ^~~~~~~~~~~~~~~~~~~
+../src/main.c:200:34: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:206:3: warning: implicit declaration of function 'DemoPrintMenu' [-Wimplicit-function-declaration]
+   DemoPrintMenu();
+   ^~~~~~~~~~~~~
+../src/main.c:226:4: warning: implicit declaration of function 'DemoChangeRes' [-Wimplicit-function-declaration]
+    DemoChangeRes();
+    ^~~~~~~~~~~~~
+../src/main.c:237:4: warning: implicit declaration of function 'DemoPrintTest' [-Wimplicit-function-declaration]
+    DemoPrintTest(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, DEMO_PATTERN_0);
+    ^~~~~~~~~~~~~
+../src/main.c:237:18: error: 'pFrames' undeclared (first use in this function)
+    DemoPrintTest(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, DEMO_PATTERN_0);
+                  ^~~~~~~
+../src/main.c:237:91: error: 'DEMO_STRIDE' undeclared (first use in this function)
+    DemoPrintTest(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, DEMO_PATTERN_0);
+                                                                                           ^~~~~~~~~~~
+../src/main.c:237:104: error: 'DEMO_PATTERN_0' undeclared (first use in this function)
+    DemoPrintTest(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, DEMO_PATTERN_0);
+                                                                                                        ^~~~~~~~~~~~~~
+../src/main.c:240:104: error: 'DEMO_PATTERN_1' undeclared (first use in this function)
+    DemoPrintTest(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, DEMO_PATTERN_1);
+                                                                                                        ^~~~~~~~~~~~~~
+../src/main.c:263:4: warning: implicit declaration of function 'DemoInvertFrame' [-Wimplicit-function-declaration]
+    DemoInvertFrame(pFrames[videoCapt.curFrame], pFrames[nextFrame], videoCapt.timing.HActiveVideo, videoCapt.timing.VActiveVideo, DEMO_STRIDE);
+    ^~~~~~~~~~~~~~~
+../src/main.c:274:4: warning: implicit declaration of function 'DemoScaleFrame' [-Wimplicit-function-declaration]
+    DemoScaleFrame(pFrames[videoCapt.curFrame], pFrames[nextFrame], videoCapt.timing.HActiveVideo, videoCapt.timing.VActiveVideo, dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE);
+    ^~~~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+18:44:15 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'getInput':
+../src/main.c:208:3: warning: implicit declaration of function 'DemoPrintMenu' [-Wimplicit-function-declaration]
+   DemoPrintMenu();
+   ^~~~~~~~~~~~~
+../src/main.c:228:4: warning: implicit declaration of function 'DemoChangeRes' [-Wimplicit-function-declaration]
+    DemoChangeRes();
+    ^~~~~~~~~~~~~
+../src/main.c:239:4: warning: implicit declaration of function 'DemoPrintTest' [-Wimplicit-function-declaration]
+    DemoPrintTest(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, DEMO_PATTERN_0);
+    ^~~~~~~~~~~~~
+../src/main.c:239:18: error: 'pFrames' undeclared (first use in this function)
+    DemoPrintTest(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, DEMO_PATTERN_0);
+                  ^~~~~~~
+../src/main.c:239:18: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:239:91: error: 'DEMO_STRIDE' undeclared (first use in this function)
+    DemoPrintTest(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, DEMO_PATTERN_0);
+                                                                                           ^~~~~~~~~~~
+../src/main.c:239:104: error: 'DEMO_PATTERN_0' undeclared (first use in this function)
+    DemoPrintTest(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, DEMO_PATTERN_0);
+                                                                                                        ^~~~~~~~~~~~~~
+../src/main.c:242:104: error: 'DEMO_PATTERN_1' undeclared (first use in this function)
+    DemoPrintTest(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, DEMO_PATTERN_1);
+                                                                                                        ^~~~~~~~~~~~~~
+../src/main.c:265:4: warning: implicit declaration of function 'DemoInvertFrame' [-Wimplicit-function-declaration]
+    DemoInvertFrame(pFrames[videoCapt.curFrame], pFrames[nextFrame], videoCapt.timing.HActiveVideo, videoCapt.timing.VActiveVideo, DEMO_STRIDE);
+    ^~~~~~~~~~~~~~~
+../src/main.c:276:4: warning: implicit declaration of function 'DemoScaleFrame' [-Wimplicit-function-declaration]
+    DemoScaleFrame(pFrames[videoCapt.curFrame], pFrames[nextFrame], videoCapt.timing.HActiveVideo, videoCapt.timing.VActiveVideo, dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE);
+    ^~~~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+18:44:48 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'getInput':
+../src/main.c:196:6: warning: unused variable 'nextFrame' [-Wunused-variable]
+  int nextFrame = 0;
+      ^~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274532	   5524	134359056	134639112	8066e08	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+18:46:28 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'getInput':
+../src/main.c:225:4: warning: implicit declaration of function 'DemoChangeRes' [-Wimplicit-function-declaration]
+    DemoChangeRes();
+    ^~~~~~~~~~~~~
+../src/main.c:236:4: warning: implicit declaration of function 'DemoPrintTest' [-Wimplicit-function-declaration]
+    DemoPrintTest(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, DEMO_PATTERN_0);
+    ^~~~~~~~~~~~~
+../src/main.c:236:18: error: 'pFrames' undeclared (first use in this function)
+    DemoPrintTest(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, DEMO_PATTERN_0);
+                  ^~~~~~~
+../src/main.c:236:18: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:236:91: error: 'DEMO_STRIDE' undeclared (first use in this function)
+    DemoPrintTest(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, DEMO_PATTERN_0);
+                                                                                           ^~~~~~~~~~~
+../src/main.c:236:104: error: 'DEMO_PATTERN_0' undeclared (first use in this function)
+    DemoPrintTest(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, DEMO_PATTERN_0);
+                                                                                                        ^~~~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+18:46:33 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'getInput':
+../src/main.c:225:4: warning: implicit declaration of function 'DemoChangeRes' [-Wimplicit-function-declaration]
+    DemoChangeRes();
+    ^~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `getInput':
+C:\Users\jerger\Desktop\Zybo-Z7-10-HDMI-master\Zybo-Z7-10-HDMI\sdk\hdmi_raytrace\Debug/../src/main.c:225: undefined reference to `DemoChangeRes'
+collect2.exe: error: ld returned 1 exit status
+make: *** [hdmi_raytrace.elf] Error 1
+18:46:38 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'getInput':
+../src/main.c:196:6: warning: unused variable 'nextFrame' [-Wunused-variable]
+  int nextFrame = 0;
+      ^~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274812	   5524	134359056	134639392	8066f20	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+18:46:55 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'getInput':
+../src/main.c:196:6: warning: unused variable 'nextFrame' [-Wunused-variable]
+  int nextFrame = 0;
+      ^~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274876	   5524	134359056	134639456	8066f60	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+18:47:46 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'getInput':
+../src/main.c:196:6: warning: unused variable 'nextFrame' [-Wunused-variable]
+  int nextFrame = 0;
+      ^~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274876	   5524	134359056	134639456	8066f60	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+18:47:52 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'getInput':
+../src/main.c:196:6: warning: unused variable 'nextFrame' [-Wunused-variable]
+  int nextFrame = 0;
+      ^~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274940	   5524	134359056	134639520	8066fa0	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+18:47:56 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'getInput':
+../src/main.c:196:6: warning: unused variable 'nextFrame' [-Wunused-variable]
+  int nextFrame = 0;
+      ^~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274940	   5524	134359056	134639520	8066fa0	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+18:48:06 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'getInput':
+../src/main.c:196:6: warning: unused variable 'nextFrame' [-Wunused-variable]
+  int nextFrame = 0;
+      ^~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 275004	   5524	134359056	134639584	8066fe0	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+18:48:10 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'getInput':
+../src/main.c:196:6: warning: unused variable 'nextFrame' [-Wunused-variable]
+  int nextFrame = 0;
+      ^~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274940	   5524	134359056	134639520	8066fa0	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+18:48:12 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'getInput':
+../src/main.c:195:17: error: expected expression before '=' token
+ int getInput() {=
+                 ^
+../src/main.c:204:9: error: 'userInput' undeclared (first use in this function)
+  while (userInput != 'q')
+         ^~~~~~~~~
+../src/main.c:204:9: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:242:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/main.o] Error 1
+18:48:14 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274940	   5524	134359056	134639520	8066fa0	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+18:48:24 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274940	   5524	134359056	134639520	8066fa0	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+18:48:29 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274940	   5524	134359056	134639520	8066fa0	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+18:48:50 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:172:16: warning: implicit declaration of function 'getInput' [-Wimplicit-function-declaration]
+   int status = getInput();
+                ^~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274940	   5524	134359056	134639520	8066fa0	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+18:48:54 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:172:16: warning: implicit declaration of function 'getInput' [-Wimplicit-function-declaration]
+   int status = getInput();
+                ^~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274940	   5524	134359056	134639520	8066fa0	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+18:48:55 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:49:22 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:172:16: warning: implicit declaration of function 'getInput' [-Wimplicit-function-declaration]
+   int status = getInput();
+                ^~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274940	   5524	134359056	134639520	8066fa0	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+18:49:41 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274940	   5524	134359056	134639520	8066fa0	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+18:50:20 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274940	   5524	134359056	134639520	8066fa0	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+18:50:21 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:50:24 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274940	   5524	134359056	134639520	8066fa0	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+18:50:29 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:51:23 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scene.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scene.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/scene.d" -MT"src/scene.o" -o "src/scene.o" "../src/scene.c"
+'Finished building: ../src/scene.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274940	   5524	134359056	134639520	8066fa0	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+18:51:26 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:53:31 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:54:23 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/renderer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/renderer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/renderer.d" -MT"src/renderer.o" -o "src/renderer.o" "../src/renderer.c"
+../src/renderer.c: In function 'renderThread':
+../src/renderer.c:277:6: error: 'CntValue1' undeclared (first use in this function)
+      CntValue1 = XScuTimer_GetCounterValue(&Timer);
+      ^~~~~~~~~
+../src/renderer.c:277:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/renderer.c:278:6: error: 'cycles' undeclared (first use in this function)
+      cycles = TIMER_LOAD_VALUE - CntValue1;
+      ^~~~~~
+../src/renderer.c:279:6: error: 'seconds' undeclared (first use in this function)
+      seconds = convert_to_seconds(cycles, prescaler);
+      ^~~~~~~
+../src/renderer.c:279:43: error: 'prescaler' undeclared (first use in this function)
+      seconds = convert_to_seconds(cycles, prescaler);
+                                           ^~~~~~~~~
+../src/renderer.c:280:6: error: 'total_run_time' undeclared (first use in this function)
+      total_run_time += seconds;
+      ^~~~~~~~~~~~~~
+../src/renderer.c:283:78: error: 'prev_run_time' undeclared (first use in this function)
+     printf("sample %d -> %f seconds\n",tile.completedSamples, total_run_time-prev_run_time);
+                                                                              ^~~~~~~~~~~~~
+../src/renderer.c:294:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/renderer.o] Error 1
+18:54:36 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/renderer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/renderer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/renderer.d" -MT"src/renderer.o" -o "src/renderer.o" "../src/renderer.c"
+../src/renderer.c: In function 'renderThread':
+../src/renderer.c:277:6: error: 'CntValue1' undeclared (first use in this function)
+      CntValue1 = XScuTimer_GetCounterValue(&Timer);
+      ^~~~~~~~~
+../src/renderer.c:277:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/renderer.c:278:6: error: 'cycles' undeclared (first use in this function)
+      cycles = TIMER_LOAD_VALUE - CntValue1;
+      ^~~~~~
+../src/renderer.c:279:6: error: 'seconds' undeclared (first use in this function)
+      seconds = convert_to_seconds(cycles, prescaler);
+      ^~~~~~~
+../src/renderer.c:279:43: error: 'prescaler' undeclared (first use in this function)
+      seconds = convert_to_seconds(cycles, prescaler);
+                                           ^~~~~~~~~
+../src/renderer.c:280:6: error: 'total_run_time' undeclared (first use in this function)
+      total_run_time += seconds;
+      ^~~~~~~~~~~~~~
+../src/renderer.c:283:78: error: 'prev_run_time' undeclared (first use in this function)
+     printf("sample %d -> %f seconds\n",tile.completedSamples, total_run_time-prev_run_time);
+                                                                              ^~~~~~~~~~~~~
+../src/renderer.c:294:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/renderer.o] Error 1
+18:54:42 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/renderer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/renderer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/renderer.d" -MT"src/renderer.o" -o "src/renderer.o" "../src/renderer.c"
+../src/renderer.c: In function 'renderThread':
+../src/renderer.c:277:6: error: 'CntValue1' undeclared (first use in this function)
+      CntValue1 = XScuTimer_GetCounterValue(&Timer);
+      ^~~~~~~~~
+../src/renderer.c:277:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/renderer.c:278:6: error: 'cycles' undeclared (first use in this function)
+      cycles = TIMER_LOAD_VALUE - CntValue1;
+      ^~~~~~
+../src/renderer.c:279:6: error: 'seconds' undeclared (first use in this function)
+      seconds = convert_to_seconds(cycles, prescaler);
+      ^~~~~~~
+../src/renderer.c:279:43: error: 'prescaler' undeclared (first use in this function)
+      seconds = convert_to_seconds(cycles, prescaler);
+                                           ^~~~~~~~~
+../src/renderer.c:280:6: error: 'total_run_time' undeclared (first use in this function)
+      total_run_time += seconds;
+      ^~~~~~~~~~~~~~
+../src/renderer.c:283:78: error: 'prev_run_time' undeclared (first use in this function)
+     printf("sample %d -> %f seconds\n",tile.completedSamples, total_run_time-prev_run_time);
+                                                                              ^~~~~~~~~~~~~
+../src/renderer.c:294:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/renderer.o] Error 1
+18:54:51 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/renderer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/renderer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/renderer.d" -MT"src/renderer.o" -o "src/renderer.o" "../src/renderer.c"
+../src/renderer.c: In function 'renderThread':
+../src/renderer.c:285:63: error: 'total_run_time' undeclared (first use in this function)
+     printf("sample %d -> %f seconds\n",tile.completedSamples, total_run_time-prev_run_time);
+                                                               ^~~~~~~~~~~~~~
+../src/renderer.c:285:63: note: each undeclared identifier is reported only once for each function it appears in
+../src/renderer.c:285:78: error: 'prev_run_time' undeclared (first use in this function)
+     printf("sample %d -> %f seconds\n",tile.completedSamples, total_run_time-prev_run_time);
+                                                                              ^~~~~~~~~~~~~
+../src/renderer.c:296:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/renderer.o] Error 1
+18:54:58 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/renderer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/renderer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/renderer.d" -MT"src/renderer.o" -o "src/renderer.o" "../src/renderer.c"
+../src/renderer.c: In function 'renderThread':
+../src/renderer.c:286:5: error: 'prev_run_time' undeclared (first use in this function)
+     prev_run_time = total_run_time;
+     ^~~~~~~~~~~~~
+../src/renderer.c:286:5: note: each undeclared identifier is reported only once for each function it appears in
+../src/renderer.c:286:21: error: 'total_run_time' undeclared (first use in this function)
+     prev_run_time = total_run_time;
+                     ^~~~~~~~~~~~~~
+../src/renderer.c:296:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/renderer.o] Error 1
+18:54:59 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/renderer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/renderer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/renderer.d" -MT"src/renderer.o" -o "src/renderer.o" "../src/renderer.c"
+../src/renderer.c: In function 'renderThread':
+../src/renderer.c:286:5: error: 'prev_run_time' undeclared (first use in this function)
+     prev_run_time = total_run_time;
+     ^~~~~~~~~~~~~
+../src/renderer.c:286:5: note: each undeclared identifier is reported only once for each function it appears in
+../src/renderer.c:286:21: error: 'total_run_time' undeclared (first use in this function)
+     prev_run_time = total_run_time;
+                     ^~~~~~~~~~~~~~
+../src/renderer.c:296:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/renderer.o] Error 1
+18:55:02 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/renderer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/renderer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/renderer.d" -MT"src/renderer.o" -o "src/renderer.o" "../src/renderer.c"
+../src/renderer.c: In function 'renderThread':
+../src/renderer.c:295:10: error: 'total_run_time' undeclared (first use in this function)
+   return total_run_time;
+          ^~~~~~~~~~~~~~
+../src/renderer.c:295:10: note: each undeclared identifier is reported only once for each function it appears in
+../src/renderer.c:296:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/renderer.o] Error 1
+18:55:10 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/renderer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/renderer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/renderer.d" -MT"src/renderer.o" -o "src/renderer.o" "../src/renderer.c"
+'Finished building: ../src/renderer.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274444	   5524	134359056	134639024	8066db0	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+18:55:14 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:56:28 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274508	   5524	134359056	134639088	8066df0	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+18:57:05 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274444	   5524	134359056	134639024	8066db0	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+18:58:30 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274444	   5524	134359056	134639024	8066db0	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+18:58:34 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:02:09 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/renderer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/renderer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/renderer.d" -MT"src/renderer.o" -o "src/renderer.o" "../src/renderer.c"
+'Finished building: ../src/renderer.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274444	   5524	134359056	134639024	8066db0	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:02:23 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/renderer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/renderer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/renderer.d" -MT"src/renderer.o" -o "src/renderer.o" "../src/renderer.c"
+'Finished building: ../src/renderer.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274444	   5524	134359056	134639024	8066db0	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:02:29 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/renderer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/renderer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/renderer.d" -MT"src/renderer.o" -o "src/renderer.o" "../src/renderer.c"
+'Finished building: ../src/renderer.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274444	   5524	134359056	134639024	8066db0	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:02:30 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/renderer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/renderer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/renderer.d" -MT"src/renderer.o" -o "src/renderer.o" "../src/renderer.c"
+'Finished building: ../src/renderer.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274444	   5524	134359056	134639024	8066db0	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:02:35 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:03:40 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:06:17 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/renderer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/renderer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/renderer.d" -MT"src/renderer.o" -o "src/renderer.o" "../src/renderer.c"
+'Finished building: ../src/renderer.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274444	   5524	134359056	134639024	8066db0	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:06:19 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:06:36 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274508	   5524	134359056	134639088	8066df0	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:06:41 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274508	   5524	134359056	134639088	8066df0	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:08:08 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274508	   5524	134359056	134639088	8066df0	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:08:22 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:12:32 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:14:20 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274572	   5524	134359056	134639152	8066e30	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:14:23 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274572	   5524	134359056	134639152	8066e30	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:14:25 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274572	   5524	134359056	134639152	8066e30	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:14:26 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:15:12 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274572	   5524	134359056	134639152	8066e30	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:15:13 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:15:21 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274572	   5524	134359056	134639152	8066e30	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:15:38 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274572	   5524	134359056	134639152	8066e30	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:15:44 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:200:5: error: conflicting types for 'getInput'
+ int getInput() {
+     ^~~~~~~~
+../src/main.c:75:6: note: previous declaration of 'getInput' was here
+ void getInput();
+      ^~~~~~~~
+make: *** [src/main.o] Error 1
+19:15:50 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'getInput':
+../src/main.c:232:11: warning: 'return' with a value, in function returning void
+    return 1;
+           ^
+../src/main.c:200:6: note: declared here
+ void getInput() {
+      ^~~~~~~~
+../src/main.c:237:11: warning: 'return' with a value, in function returning void
+    return 1;
+           ^
+../src/main.c:200:6: note: declared here
+ void getInput() {
+      ^~~~~~~~
+../src/main.c:239:11: warning: 'return' with a value, in function returning void
+    return 1;
+           ^
+../src/main.c:200:6: note: declared here
+ void getInput() {
+      ^~~~~~~~
+../src/main.c:248:9: warning: 'return' with a value, in function returning void
+  return 0;
+         ^
+../src/main.c:200:6: note: declared here
+ void getInput() {
+      ^~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274572	   5524	134359056	134639152	8066e30	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:16:07 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'getInput':
+../src/main.c:248:2: error: break statement not within loop or switch
+  break;
+  ^~~~~
+make: *** [src/main.o] Error 1
+19:16:14 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274572	   5524	134359056	134639152	8066e30	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:16:39 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'getInput':
+../src/main.c:231:38: error: expected expression before '=' token
+    computeFocalLength(&mainRenderer);=
+                                      ^
+make: *** [src/main.o] Error 1
+19:16:40 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274636	   5524	134359056	134639216	8066e70	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:16:58 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274636	   5524	134359056	134639216	8066e70	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:17:02 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274636	   5524	134359056	134639216	8066e70	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:17:03 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274636	   5524	134359056	134639216	8066e70	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:17:08 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:18:51 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274636	   5524	134359056	134639216	8066e70	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:18:54 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274636	   5524	134359056	134639216	8066e70	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:18:56 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274636	   5524	134359056	134639216	8066e70	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:19:00 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:23:14 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274572	   5524	134359056	134639152	8066e30	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:23:26 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/renderer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/renderer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/renderer.d" -MT"src/renderer.o" -o "src/renderer.o" "../src/renderer.c"
+'Finished building: ../src/renderer.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274408	   5524	134359056	134638988	8066d8c	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:23:33 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:132:56: error: 'tilesX' undeclared (first use in this function)
+  mainRenderer.renderTiles = (struct renderTile*)calloc(tilesX*tilesY, sizeof(struct renderTile));
+                                                        ^~~~~~
+../src/main.c:132:56: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:132:63: error: 'tilesY' undeclared (first use in this function)
+  mainRenderer.renderTiles = (struct renderTile*)calloc(tilesX*tilesY, sizeof(struct renderTile));
+                                                               ^~~~~~
+make: *** [src/main.o] Error 1
+19:23:44 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274572	   5524	134359056	134639152	8066e30	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:23:52 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274572	   5524	134359056	134639152	8066e30	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:24:20 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/renderer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/renderer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/renderer.d" -MT"src/renderer.o" -o "src/renderer.o" "../src/renderer.c"
+../src/renderer.c: In function 'quantizeImage':
+../src/renderer.c:74:2: error: 'tilesX' undeclared (first use in this function)
+  tilesX = 1;
+  ^~~~~~
+../src/renderer.c:74:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/renderer.c:75:2: error: 'tilesY' undeclared (first use in this function)
+  tilesY = 1;
+  ^~~~~~
+make: *** [src/renderer.o] Error 1
+19:24:24 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/renderer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/renderer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/renderer.d" -MT"src/renderer.o" -o "src/renderer.o" "../src/renderer.c"
+'Finished building: ../src/renderer.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274316	   5524	134359056	134638896	8066d30	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:24:34 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:49:28 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scene.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scene.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/scene.d" -MT"src/scene.o" -o "src/scene.o" "../src/scene.c"
+'Finished building: ../src/scene.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274316	   5524	134359056	134638896	8066d30	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:49:29 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:50:01 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scene.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scene.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/scene.d" -MT"src/scene.o" -o "src/scene.o" "../src/scene.c"
+'Finished building: ../src/scene.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274316	   5524	134359056	134638896	8066d30	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:50:07 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scene.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scene.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/scene.d" -MT"src/scene.o" -o "src/scene.o" "../src/scene.c"
+'Finished building: ../src/scene.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274316	   5524	134359056	134638896	8066d30	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:50:11 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:50:35 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scene.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scene.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/scene.d" -MT"src/scene.o" -o "src/scene.o" "../src/scene.c"
+'Finished building: ../src/scene.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274316	   5524	134359056	134638896	8066d30	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:50:36 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:51:05 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scene.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scene.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/scene.d" -MT"src/scene.o" -o "src/scene.o" "../src/scene.c"
+'Finished building: ../src/scene.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274316	   5524	134359056	134638896	8066d30	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:51:07 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:51:29 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scene.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scene.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/scene.d" -MT"src/scene.o" -o "src/scene.o" "../src/scene.c"
+'Finished building: ../src/scene.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274316	   5524	134359056	134638896	8066d30	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:51:31 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:52:03 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scene.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scene.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/scene.d" -MT"src/scene.o" -o "src/scene.o" "../src/scene.c"
+'Finished building: ../src/scene.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274316	   5524	134359056	134638896	8066d30	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:52:42 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'getInput':
+../src/main.c:233:4: warning: implicit declaration of function 'addCamTransform' [-Wimplicit-function-declaration]
+    addCamTransform(r->scene->camera, newTransformRotateX(-10));
+    ^~~~~~~~~~~~~~~
+../src/main.c:233:20: error: 'r' undeclared (first use in this function)
+    addCamTransform(r->scene->camera, newTransformRotateX(-10));
+                    ^
+../src/main.c:233:20: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:239:4: error: expected ':' or '...' before 'addCamTransform'
+    addCamTransform(r->scene->camera, newTransformRotateX(10));
+    ^~~~~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+19:52:44 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'getInput':
+../src/main.c:233:4: warning: implicit declaration of function 'addCamTransform' [-Wimplicit-function-declaration]
+    addCamTransform(r->scene->camera, newTransformRotateX(-10));
+    ^~~~~~~~~~~~~~~
+../src/main.c:233:20: error: 'r' undeclared (first use in this function)
+    addCamTransform(r->scene->camera, newTransformRotateX(-10));
+                    ^
+../src/main.c:233:20: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/main.o] Error 1
+19:53:03 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'getInput':
+../src/main.c:233:4: warning: implicit declaration of function 'addCamTransform' [-Wimplicit-function-declaration]
+    addCamTransform(mainRenderer->scene->camera, newTransformRotateX(-10));
+    ^~~~~~~~~~~~~~~
+../src/main.c:233:32: error: invalid type argument of '->' (have 'struct renderer')
+    addCamTransform(mainRenderer->scene->camera, newTransformRotateX(-10));
+                                ^~
+../src/main.c:239:32: error: invalid type argument of '->' (have 'struct renderer')
+    addCamTransform(mainRenderer->scene->camera, newTransformRotateX(10));
+                                ^~
+make: *** [src/main.o] Error 1
+19:53:27 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'getInput':
+../src/main.c:233:4: warning: implicit declaration of function 'addCamTransform' [-Wimplicit-function-declaration]
+    addCamTransform(mainRenderer.scene->camera, newTransformRotateX(-10));
+    ^~~~~~~~~~~~~~~
+../src/main.c:239:32: error: invalid type argument of '->' (have 'struct renderer')
+    addCamTransform(mainRenderer->scene->camera, newTransformRotateX(10));
+                                ^~
+make: *** [src/main.o] Error 1
+19:53:30 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'getInput':
+../src/main.c:233:4: warning: implicit declaration of function 'addCamTransform' [-Wimplicit-function-declaration]
+    addCamTransform(mainRenderer.scene->camera, newTransformRotateX(-10));
+    ^~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274380	   5524	134359056	134638960	8066d70	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:53:43 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'getInput':
+../src/main.c:233:4: warning: implicit declaration of function 'addCamTransform' [-Wimplicit-function-declaration]
+    addCamTransform(mainRenderer.scene->camera, newTransformRotateX(-10));
+    ^~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274316	   5524	134359056	134638896	8066d30	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:54:29 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'getInput':
+../src/main.c:233:4: warning: implicit declaration of function 'addCamTransform' [-Wimplicit-function-declaration]
+    addCamTransform(mainRenderer.scene->camera, newTransformRotateX(-10));
+    ^~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274316	   5524	134359056	134638896	8066d30	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:55:09 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/camera.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/camera.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/camera.d" -MT"src/camera.o" -o "src/camera.o" "../src/camera.c"
+'Finished building: ../src/camera.c'
+' '
+'Building file: ../src/filehandler.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/filehandler.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/filehandler.d" -MT"src/filehandler.o" -o "src/filehandler.o" "../src/filehandler.c"
+'Finished building: ../src/filehandler.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/raytrace.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/raytrace.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/raytrace.d" -MT"src/raytrace.o" -o "src/raytrace.o" "../src/raytrace.c"
+../src/raytrace.c: In function 'getHighlights':
+../src/raytrace.c:231:76: warning: passing argument 2 of 'colorCoef' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+    struct color specTmp = colorCoef(specVal*(currentLight.power/distance), &isect->end.specular);
+                                                                            ^
+In file included from ../src/includes.h:43:0,
+                 from ../src/raytrace.c:9:
+../src/color.h:72:14: note: expected 'struct color *' but argument is of type 'const struct color *'
+ struct color colorCoef(double coef, struct color *c);
+              ^~~~~~~~~
+../src/raytrace.c: In function 'getLighting':
+../src/raytrace.c:343:15: warning: unused variable 'textureCoord' [-Wunused-variable]
+  struct coord textureCoord = {0.0, 0.0};
+               ^~~~~~~~~~~~
+../src/raytrace.c: In function 'rayTrace':
+../src/raytrace.c:423:16: warning: unused variable 'textureCoord' [-Wunused-variable]
+   struct coord textureCoord = {0.0, 0.0};
+                ^~~~~~~~~~~~
+../src/raytrace.c:422:17: warning: unused variable 'uv' [-Wunused-variable]
+   struct coord  uv          = {0.0, 0.0};
+                 ^~
+'Finished building: ../src/raytrace.c'
+' '
+'Building file: ../src/renderer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/renderer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/renderer.d" -MT"src/renderer.o" -o "src/renderer.o" "../src/renderer.c"
+'Finished building: ../src/renderer.c'
+' '
+'Building file: ../src/scene.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scene.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/scene.d" -MT"src/scene.o" -o "src/scene.o" "../src/scene.c"
+'Finished building: ../src/scene.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274316	   5524	134359056	134638896	8066d30	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:55:27 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:56:07 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:57:50 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:59:51 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/renderer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/renderer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/renderer.d" -MT"src/renderer.o" -o "src/renderer.o" "../src/renderer.c"
+'Finished building: ../src/renderer.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274316	   5524	134359056	134638896	8066d30	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:59:55 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274316	   5524	134359056	134638896	8066d30	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+19:59:57 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:01:34 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:02:42 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274316	   5524	134359056	134638896	8066d30	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+20:03:31 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274316	   5524	134359056	134638896	8066d30	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+20:03:35 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274380	   5524	134359056	134638960	8066d70	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+20:04:00 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:04:56 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:06:53 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:08:21 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/renderer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/renderer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/renderer.d" -MT"src/renderer.o" -o "src/renderer.o" "../src/renderer.c"
+'Finished building: ../src/renderer.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274380	   5524	134359056	134638960	8066d70	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+20:08:27 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:09:11 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274380	   5524	134359056	134638960	8066d70	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+20:09:23 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:09:39 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274380	   5524	134359056	134638960	8066d70	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+20:09:42 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:11:49 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274380	   5524	134359056	134638960	8066d70	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+20:12:00 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/renderer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/renderer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/renderer.d" -MT"src/renderer.o" -o "src/renderer.o" "../src/renderer.c"
+'Finished building: ../src/renderer.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274316	   5524	134359056	134638896	8066d30	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+20:12:17 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/renderer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/renderer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/renderer.d" -MT"src/renderer.o" -o "src/renderer.o" "../src/renderer.c"
+'Finished building: ../src/renderer.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274316	   5524	134359056	134638896	8066d30	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+20:12:46 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/renderer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/renderer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/renderer.d" -MT"src/renderer.o" -o "src/renderer.o" "../src/renderer.c"
+'Finished building: ../src/renderer.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274316	   5524	134359056	134638896	8066d30	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+20:13:05 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/renderer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/renderer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/renderer.d" -MT"src/renderer.o" -o "src/renderer.o" "../src/renderer.c"
+'Finished building: ../src/renderer.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274284	   5524	134359056	134638864	8066d10	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+20:13:09 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/renderer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/renderer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/renderer.d" -MT"src/renderer.o" -o "src/renderer.o" "../src/renderer.c"
+'Finished building: ../src/renderer.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274284	   5524	134359056	134638864	8066d10	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+20:13:11 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:13:20 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/renderer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/renderer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/renderer.d" -MT"src/renderer.o" -o "src/renderer.o" "../src/renderer.c"
+'Finished building: ../src/renderer.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274220	   5524	134359056	134638800	8066cd0	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+20:13:21 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:15:26 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274540	   5524	134359056	134639120	8066e10	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+20:15:33 **** Auto Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: hdmi_raytrace.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hdmi_raytrace.elf"  ./src/camera.o ./src/color.o ./src/converter.o ./src/display_ctrl.o ./src/dynclk.o ./src/errorhandler.o ./src/filehandler.o ./src/intc.o ./src/light.o ./src/lightRay.o ./src/list.o ./src/lodepng.o ./src/main.o ./src/material.o ./src/obj.o ./src/obj_parser.o ./src/platform.o ./src/raytrace.o ./src/renderer.o ./src/scene.o ./src/sphere.o ./src/string_extra.o ./src/timer_ps.o ./src/transforms.o ./src/vector.o ./src/video_capture.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_raytrace.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hdmi_raytrace.elf  |tee "hdmi_raytrace.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 274540	   5524	134359056	134639120	8066e10	hdmi_raytrace.elf
+'Finished building: hdmi_raytrace.elf.size'
+' '
+20:15:36 **** Incremental Build of configuration Debug for project hdmi_raytrace ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.

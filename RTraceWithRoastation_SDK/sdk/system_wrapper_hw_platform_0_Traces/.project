@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>system_wrapper_hw_platform_0_Traces</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.linuxtools.tmf.project.nature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>Traces/Run_Apr-26_18-37/PS_Trace_Apr-26_18-37/PS_Trace_Apr-26_18-37_</name>
+			<type>1</type>
+			<location>C:/Users/jerger/Desktop/Zybo-Z7-10-HDMI-master/Zybo-Z7-10-HDMI/sdk/system_wrapper_hw_platform_0_Traces/Traces/.bookmarks</location>
+		</link>
+		<link>
+			<name>Traces/Run_Apr-26_18-37/PS_Trace_Apr-26_18-37_1/PS_Trace_Apr-26_18-37_1_</name>
+			<type>1</type>
+			<location>C:/Users/jerger/Desktop/Zybo-Z7-10-HDMI-master/Zybo-Z7-10-HDMI/sdk/system_wrapper_hw_platform_0_Traces/Traces/.bookmarks</location>
+		</link>
+	</linkedResources>
+</projectDescription>
