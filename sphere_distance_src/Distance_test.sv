@@ -4,15 +4,15 @@ module Distance_test();
     parameter HalfClk = 10;
     
     // test inputs
-    logic [15:0] rootDiscriminant;
-    logic signed [15:0] B;
+    logic [31:0] rootDiscriminant;
+    logic signed [31:0] B;
     logic quickIntersects;
-    logic [15:0] oldDistance;
+    logic [31:0] oldDistance;
     logic CLK, areset, inputValid;
     
     // test outputs
     wire intersects;
-    wire [15:0] distance;
+    wire [31:0] distance;
     wire inputReady, dataOutWrite;
     
     DistanceCalculator calc(
@@ -64,7 +64,7 @@ module Distance_test();
         $display("sphere radius 2 at (0, 0, 0) and a ray from (0, 0, -10) with direction (0, 0, 1)");
         $display("from the first step, discriminant is 16, B is -20, and intersects is true");
         rootDiscriminant = 4;
-        B = 16'hffec; // -20 with 16 bits signed
+        B = 32'hffffffec; // -20 with 32 bits signed
         quickIntersects = 1'b1;
         oldDistance = 1000; // set the initial distance to some arbitrary high value
         
@@ -87,7 +87,7 @@ module Distance_test();
         $display("sphere radius 2 at (10, -10, 10) and a ray from (0, 10, 0) with direction (0, -1, 0)");
         $display("from the first step, discriminant is -784, B is -40, and intersects is false");
         rootDiscriminant = 0; // some error value
-        B = 16'hffd8; // -40 with 16 bits signed
+        B = 32'hffffffd8; // -40 with 32 bits signed
         quickIntersects = 1'b0;
         oldDistance = 1000;
  
@@ -110,7 +110,7 @@ module Distance_test();
         $display("sphere radius 3 at (10, 10, 0) and a ray from (0, 0, 0) with direction (1, 1, 0)");
         $display("from the first step, discriminant is 72, B is -40, and intersects is true");
         rootDiscriminant = 8; // 8.48 rounded down
-        B = 16'hffd8; // -40 with 16 bits signed
+        B = 32'hffffffd8; // -40 with 32 bits signed
         quickIntersects = 1'b1;
         oldDistance = 1000;
  

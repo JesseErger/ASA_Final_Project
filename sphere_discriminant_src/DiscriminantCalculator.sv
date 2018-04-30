@@ -1,18 +1,18 @@
 `timescale 1ns / 1ps
 
 module DiscriminantCalculator(
-    input signed [15:0] SphereX,
-    input signed [15:0] SphereY,
-    input signed [15:0] SphereZ,
-    input [15:0] SphereRadius,
-    input signed [15:0] RayStartX,
-    input signed [15:0] RayStartY,
-    input signed [15:0] RayStartZ,
-    input signed [15:0] RayDirX,
-    input signed [15:0] RayDirY,
-    input signed [15:0] RayDirZ,
-    output signed [15:0] Discriminant,
-    output signed [15:0] B_out,
+    input signed [31:0] SphereX,
+    input signed [31:0] SphereY,
+    input signed [31:0] SphereZ,
+    input [31:0] SphereRadius,
+    input signed [31:0] RayStartX,
+    input signed [31:0] RayStartY,
+    input signed [31:0] RayStartZ,
+    input signed [31:0] RayDirX,
+    input signed [31:0] RayDirY,
+    input signed [31:0] RayDirZ,
+    output signed [31:0] Discriminant,
+    output signed [31:0] B_out,
     output QuickIntersects,
     input CLK,
     input aresetn,
@@ -32,23 +32,23 @@ module DiscriminantCalculator(
     logic [1:0] state;
         
     // input variables
-    logic signed [15:0] dx;
-    logic signed [15:0] dy;
-    logic signed [15:0] dz;
+    logic signed [31:0] dx;
+    logic signed [31:0] dy;
+    logic signed [31:0] dz;
     
     // output variables
-    logic signed [15:0] discriminant;
+    logic signed [31:0] discriminant;
                   
     // internal logic variables
-    logic signed [15:0] A;
-    logic signed [15:0] B;
-    logic signed [15:0] C;
-    logic signed [15:0] distX;
-    logic signed [15:0] distY;
-    logic signed [15:0] distZ;
+    logic signed [31:0] A;
+    logic signed [31:0] B;
+    logic signed [31:0] C;
+    logic signed [31:0] distX;
+    logic signed [31:0] distY;
+    logic signed [31:0] distZ;
     
     // temp variables
-    logic [15:0] sphereRadiusSquared;
+    logic [31:0] sphereRadiusSquared;
     
     // output logic
     assign InputReady = (state == waiting);

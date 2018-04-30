@@ -11,14 +11,15 @@
 
 		// Parameters of Axi Slave Bus Interface S00_AXI
 		parameter integer C_S00_AXI_DATA_WIDTH	= 32,
-		parameter integer C_S00_AXI_ADDR_WIDTH	= 5
+		parameter integer C_S00_AXI_ADDR_WIDTH	= 6
 	)
 	(
 		// Users to add ports here
         output wire QuickIntersects,
-        output wire [15:0] Discriminant,
-        output wire [15:0] B_out,
+        output wire [31:0] Discriminant,
+        output wire [31:0] B_out,
         output wire OutputReady,
+        output wire [31:0] OldDistance,        
 
 		// User ports ends
 		// Do not modify the ports beyond this line
@@ -56,6 +57,7 @@
         .Discriminant(Discriminant),
         .B_out(B_out),
         .OutputReady(OutputReady),
+        .OldDistance(OldDistance),
 		.S_AXI_ACLK(s00_axi_aclk),
 		.S_AXI_ARESETN(s00_axi_aresetn),
 		.S_AXI_AWADDR(s00_axi_awaddr),

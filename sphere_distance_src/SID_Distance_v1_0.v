@@ -15,8 +15,9 @@
 	)
 	(
 		// Users to add ports here
-        input wire [15:0] RootDiscriminant,
-        input wire [15:0] B,   
+        input wire [23:0] RootDiscriminant,
+        input wire [31:0] B,
+        input wire [31:0] OldDistance,
         input wire QuickIntersects,
         input wire RootValid,
 
@@ -54,7 +55,8 @@
 	) SID_Distance_v1_0_S00_AXI_inst (	
         .RootDiscriminant(RootDiscriminant),
         .B(B),
-        .QuickIntersects(QuickIntersects),
+        .OldDistance(OldDistance),
+        .QuickIntersects(QuickIntersects),        
         .RootValid(RootValid),
 		.S_AXI_ACLK(s00_axi_aclk),
 		.S_AXI_ARESETN(s00_axi_aresetn),

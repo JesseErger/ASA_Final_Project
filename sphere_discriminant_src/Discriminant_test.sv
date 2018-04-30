@@ -4,15 +4,15 @@ module Discriminant_test();
     parameter HalfClk = 10;
     
     // test inputs
-    logic [15:0] sphereX, sphereY, sphereZ;
-    logic [15:0] sphereRadius;
-    logic [15:0] rayX, rayY, rayZ;
-    logic [15:0] rayDX, rayDY, rayDZ;
+    logic signed [31:0] sphereX, sphereY, sphereZ;
+    logic [31:0] sphereRadius;
+    logic signed [31:0] rayX, rayY, rayZ;
+    logic signed [31:0] rayDX, rayDY, rayDZ;
     logic CLK, areset, inputValid;
     
     // test outputs
     wire intersects;
-    wire [15:0] discriminant, b_out;
+    wire [31:0] discriminant, b_out;
     wire inputReady, dataOutWrite;
     
     DiscriminantCalculator calc(
@@ -99,7 +99,7 @@ module Discriminant_test();
         $display("intersects? %d, discriminant=%d, b=%d", intersects, discriminant, b_out);
         assert(intersects == 1);
         assert(discriminant == 16);
-        assert(b_out == 16'hffec); // -20 with 16 bits signed
+        assert(b_out == 32'hffffffec); // -20 with 32 bits signed
         #(HalfClk * 2);
         
         // second test
@@ -127,8 +127,8 @@ module Discriminant_test();
         // display the result
         $display("intersects? %d, discriminant=%d, b=%d", intersects, discriminant, b_out);
         assert(intersects == 0);
-        assert(discriminant == 16'hfcf0); // -784 with 16 bits signed
-        assert(b_out == 16'hffd8); // -40 with 16 bits signed
+        assert(discriminant == 32'hfffffcf0); // -784 with 32 bits signed
+        assert(b_out == 32'hffffffd8); // -40 with 32 bits signed
         #(HalfClk * 2);
           
         
@@ -157,8 +157,8 @@ module Discriminant_test();
         // display the result
         $display("intersects? %d, discriminant=%d, b=%d", intersects, discriminant, b_out);
         assert(intersects == 1);
-        assert(discriminant == 16'h0048);
-        assert(b_out == 16'hffd8); // -40 with 16 bits signed
+        assert(discriminant == 32'h00000048);
+        assert(b_out == 32'hffffffd8); // -40 with 32 bits signed
         #(HalfClk * 2);
           
         $finish;
